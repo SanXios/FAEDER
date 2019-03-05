@@ -7396,7 +7396,7 @@ end
 
 ----------------------------------------faeder-------------------------------------------------------
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^[Ww]elcome on$") or text:match("^مساند تفعيل الترحيب$") then
+if text:match("^[Ww]elcome on$") or text:match("^سان تفعيل الترحيب$") then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, ' 📋※  Welcome activated • ', 1, 'md')
 else
@@ -7404,7 +7404,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '📋※ تم تفعيل الترحيب •',
 end
 faederdx1:set(FAEDER.."bot:welcome"..msg.chat_id_,true)
 end
-if text:match("^[Ww]elcome off$") or text:match("^مساند تعطيل الترحيب$") then
+if text:match("^[Ww]elcome off$") or text:match("^سان تعطيل الترحيب$") then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '📋※ Welcome deactivated ', 1, 'md')
 else
@@ -7412,8 +7412,8 @@ faederdx(msg.chat_id_, msg.id_, 1, '📋※ تم تعطيل الترحيب •',
 end
 faederdx1:del(FAEDER.."bot:welcome"..msg.chat_id_)
 end
-if text:match("^مساند ضع ترحيب (.*)$")  then
-local welcome = {string.match(text, "^(مساند ضع ترحيب) (.*)$")}
+if text:match("^سان ضع ترحيب (.*)$")  then
+local welcome = {string.match(text, "^(سان ضع ترحيب) (.*)$")}
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '📋※ Welcome text has been saved \n\n🚦⁞  Welcome text :\n\n'..welcome[2], 1, 'html')
 else
@@ -7421,7 +7421,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '📋※ تم حفض الترحيب •\n\n�
 end
 faederdx1:set(FAEDER..'welcome:'..msg.chat_id_,welcome[2])
 end
-if text:match("^[Dd]el welcome$") or text:match("^مساند حذف الترحيب$") then
+if text:match("^[Dd]el welcome$") or text:match("^سان حذف الترحيب$") then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '📋※ Welcome text has been removed •', 1, 'md')
 else
@@ -7429,7 +7429,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '📋※ تم حذف الترحيب •', 1, 
 end
 faederdx1:del(FAEDER..'welcome:'..msg.chat_id_)
 end
-if text:match("^[Gg]et welcome$") or text:match("^مساند جلب الترحيب$") then
+if text:match("^[Gg]et welcome$") or text:match("^سان جلب الترحيب$") then
 local wel = faederdx1:get(FAEDER..'welcome:'..msg.chat_id_)
 if wel then
 faederdx(msg.chat_id_, msg.id_, 1, wel, 1, 'md')
@@ -8435,7 +8435,7 @@ faederdx1:set(FAEDER.."kaf"..msg.chat_id_, true)
 end
 -------------------------------------faeder----------------------------------------------------------
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^[Uu]nlock (.*)$") or text:match("^مساند فتح (.*)$") then
+if text:match("^[Uu]nlock (.*)$") or text:match("^سان فتح (.*)$") then
 local unmutept = {string.match(text, "^([Uu]nlock) (.*)$")}
 if is_leaderid(msg.sender_user_id_) then
 tar = 'المطور ✨'
@@ -9421,8 +9421,8 @@ else
 faederdx(msg.chat_id_, msg.id_, 1, '🎖⁞ تم وضع قوانين المجموعه •', 1, 'md')
 end
 end
-if text:match("^مساند ضع قوانين (.*)$") then
-local txt = {string.match(text, "^(مساند ضع قوانين) (.*)$")}
+if text:match("^سان ضع قوانين (.*)$") then
+local txt = {string.match(text, "^(سان ضع قوانين) (.*)$")}
 faederdx1:set(FAEDER..'bot:rules'..msg.chat_id_, txt[2])
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '📋※ Group rules has been saved •', 1, 'md')
