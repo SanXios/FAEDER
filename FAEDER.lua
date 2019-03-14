@@ -9319,8 +9319,8 @@ else
 faederdx(msg.chat_id_, msg.id_, 1, '🎖⁞ تم وضع قوانين المجموعه •', 1, 'md')
 end
 end
-if text:match("^سان ضع قوانين (.*)$") then
-local txt = {string.match(text, "^(سان ضع قوانين) (.*)$")}
+if text:match("^ ضع قوانين (.*)$") then
+local txt = {string.match(text, "^( ضع قوانين) (.*)$")}
 faederdx1:set(FAEDER..'bot:rules'..msg.chat_id_, txt[2])
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '📋※ Group rules has been saved •', 1, 'md')
@@ -9345,7 +9345,7 @@ local note = faederdx1:get(FAEDER..'owner:note1')
 faederdx(msg.chat_id_, msg.id_, 1, note, 1, nil)
 end
 -----------------------------------faeder--------------------------------------------------------------
-if text:match("^[Rr]ules$") or text:match("^القوانين$") then
+if text:match("^[Rr]ules$") or text:match("^قوانين$") then
 local rules = faederdx1:get(FAEDER..'bot:rules'..msg.chat_id_)
 faederdx(msg.chat_id_, msg.id_, 1, rules, 1, nil)
 end
