@@ -2624,7 +2624,7 @@ delete_msg(chat, msgs)
 faederdx(msg.chat_id_, msg.id_, 1, '📋※ ممنوع التكلم باللغه الفارسيه هنا 🚫 •', 1, 'md')   
 end 
 end
-if text:match("شيعي نكس") or text:match("سني نكس") or text:match("شيعه") or text:match("الشيعه") or text:match("السنه") or text:match("سني") or text:match("طائفتكم") or text:match("اني سني") or text:match("اني شيعي") or text:match("انا سني") or text:match("انا شيعي") and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if text:match("شيعي نكس") or text:match("سني نكس") or text:match("شيعه") or text:match("الشيعه") or text:match("سني") or text:match("سني") or text:match("طائفتكم") or text:match("اني سني") or text:match("اني شيعي") or text:match("انا سني") or text:match("انا شيعي") and is_owner(msg.sender_user_id_, msg.chat_id_) then
 if not faederdx1:get(FAEDER.."taf"..msg.chat_id_) and not is_owner(msg.sender_user_id_, msg.chat_id_) then
 local id = msg.id_
 local msgs = { [0] = id}
@@ -3752,7 +3752,7 @@ else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),hena)   
 end
 end
-if text:match("^بوسها$") or text:match("^بعد بوسها$") or text:match("^ضل بوس$") then
+if text:match("^لبلب$") or text:match("^بعد بلب$") or text:match("^ضل بلب$") then
 function hena(extra, result, success)
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then 
 faederdx(msg.chat_id_, msg.id_, 1, '• حياتي بس فهمني شون ابوس نفسي وتدلل 😔😂', 1, 'md') 
@@ -3772,7 +3772,7 @@ else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),hena)   
 end
 end
-if text:match("^بوسه$") or text:match("^بعد بوسه$") or text:match("^ضل بوس$") then
+if text:match("^ابا$") or text:match("^بعد بب$") or text:match("^ضل باب$") then
 function hena(extra, result, success)
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then 
 faederdx(msg.chat_id_, msg.id_, 1, '• حياتي بس فهمني شون ابوس نفسي وتدلل 😔😂', 1, 'md') 
@@ -4498,7 +4498,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '📋※ لا تستطيع كتمي •', 1, 
 return false 
 end 
 if is_momod(result.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *لا تستطيع كتم* « ['..faeder_res..'] »\n💯┊❯ *لانه تاج راسك •*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *لا تستطيع كتم* « ['..faeder_res..'] »\n💯┊❯ *لانه تاج راسي •*', 1, 'md')
 else 
 faederdx1:sadd(FAEDER..'bot:muted:'..msg.chat_id_, result.sender_user_id_)
 faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم  «كتمه » بنجاح*', 1, 'md')
@@ -9319,7 +9319,7 @@ else
 faederdx(msg.chat_id_, msg.id_, 1, '🎖⁞ تم وضع قوانين المجموعه •', 1, 'md')
 end
 end
-if text:match("^ ضع قوانين (.*)$") then
+if text:match("^ضع قوانين (.*)$") then
 local txt = {string.match(text, "^( ضع قوانين) (.*)$")}
 faederdx1:set(FAEDER..'bot:rules'..msg.chat_id_, txt[2])
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
