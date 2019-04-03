@@ -1101,7 +1101,7 @@ end
 end
 if result.first_name_ then 
 if dx and dx ~= result.first_name_ then 
-local faeder_text != {
+local faeder_text = {
   "اسمك الجديد { "..result.first_name_.." }\n ليش غيرته 🌚😹",
   "اسمك الجديد { "..result.first_name_.." }\n مو حلو رجعه القديم ☹️👌",
   "ليش غيرت اسمك { "..result.first_name_.." }\n قطيت احد حبي ؟ 🌚😹",
@@ -1131,7 +1131,7 @@ end
 end
 if result.username_ then 
 if dx and dx ~= result.username_ then 
-local faeder_text != {
+local faeder_text = {
   'كمشتك ليش غيرت معرفك ولك 😹',
   "ليش غيرت معرف طشوك بقنات انحراف ؟ ⛷😹",
   "حلو معرفك الجديد منين خمطته 😹",
@@ -1162,7 +1162,7 @@ end
 end
 if result.profile_photo_ then 
 if dx2 and dx2 ~= result.profile_photo_.big_.persistent_id_ then 
-local dx_text != {
+local dx_text = {
   "طالع صاك بالصوره الجديده ممكن نرتبط",
   "صوره فيطي الجديده غيرها",
   "صورتك الجديده فد شي 😑😹",
@@ -2905,7 +2905,7 @@ print("Return False [Lock] [Cmd]")
 return false
 else  
 --------------------------------------faeder
-if text !== 'دي' then 
+if text == 'دي' then 
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 faeder =  "يـٰ̲ـہمـٰ̲ـہشـٰ̲ـہوٰكـٰ̲ـہ بـٰ̲ـہيـٰ̲ـہهـٰ̲ـہاٰ حـٰ̲ـہيـٰ̲ـہوٰاٰنـٰ̲ـہ ♯⋮ֆ🗡🦁"
 else 
@@ -2913,7 +2913,7 @@ faeder = ''
 end
 faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
-if text !== 'سلام' then 
+if text == 'سلام' then 
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 faeder =  "عٰہٰٖلہٰٖيٰہٰٖكٰہٰٖمٰہٰٖ اٰلہٰٖسٰہٰٖلہٰٖاٰمٰہٰٖ اٰغٰہٰٖاٰتٰہٰٖيٰہٰٖ ❊😼🎶ֆ"
 else 
@@ -2921,7 +2921,7 @@ faeder = ''
 end
 faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
-if text !== '😭💔' then      
+if text == '😭💔' then      
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 faeder =  "لتَہَٰبّہجْۧيِٰہ حہٰٰيِٰہآتَہَٰيِٰہ ف͒ہٰٰديِٰہتَہَٰڪٰྀہٰٰٖ ║😿 ₍♚⁾??"
 else 
@@ -2929,7 +2929,7 @@ faeder = ''
 end 
 faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
-if text !== '🌚💔' then      
+if text == '🌚💔' then      
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 faeder =  "تَہَٰ؏ۤـہآل آشِٰہٰٰڪٰྀہٰٰٖيِٰہليِٰہ ٰ̲ھہمٰ̲ہوِمٰ̲ہڪٰྀہٰٰٖ ⁞✦⁽😭🔥₎“ٰۦ"
 else 
@@ -2937,7 +2937,7 @@ faeder = ''
 end 
 faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
-if text !== 'باي' then      
+if text == 'باي' then      
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 faeder =  "خ̲ـꨩﮧلٍُـّٰ̐ہيـِٰ̲ﮧكـِّﮧْٰٖ دٰཻا ཻاضـٰ๋۪͜ﮧٰح̲ꪳـﮧكـِّﮧْٰٖ عـ͜ާﮧْلٍُـّٰ̐ہيـِٰ̲ﮧكـِّﮧْٰٖ ⩩ཻ🌞ֆ﴾"
 else 
@@ -2945,7 +2945,7 @@ faeder = ''
 end 
 faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
-if text !== 'هلو' then      
+if text == 'هلو' then      
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 faeder =  "♛#ֆ‘﴾ۗ ʟ̤ɾʅ᎗̣ɹᓗ ᎗̈ɹȊg⅃᎗බ"
 else 
@@ -2953,7 +2953,7 @@ faeder = ''
 end 
 faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
-if text !== 'شونك' then      
+if text == 'شونك' then      
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 faeder =  "آنَِٰہيِٰہ تَہَٰمٰ̲ہآمٰ̲ہ آنَِٰہتَہَٰ شِٰہٰٰلوِنَِٰہڪٰྀہٰٰٖ  ⁽࿑♚꫶😼ֆ﴾"
 else 
@@ -2961,7 +2961,7 @@ faeder = ''
 end 
 faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
-if text !== 'وينك' or text !== 'وينج' then 
+if text == 'وينك' or text == 'وينج' then 
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 faeder =  "عـٰ̲ـہوٰفـٰ̲ـہنـٰ̲ـہيـٰ̲ـہ جـٰ̲ـہاٰيـٰ̲ـہ اٰزٰحـٰ̲ـہفـٰ̲ـہ 🐼⚡️ֆ‘﴾"
 else 
@@ -2969,7 +2969,7 @@ faeder = ''
 end 
 faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
-if text !== 'نايمين' or text !== 'ميتين' then 
+if text == 'نايمين' or text == 'ميتين' then 
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 faeder =  "آنَِٰہيِٰہ ڪٰྀہٰٰٖآ؏ۤـہد آحہٰٰرسٰٰٓڪٰྀہٰٰٖمٰ̲ہ ℡̮⇣┆👑😻⇣ۦ"
 else 
@@ -2977,7 +2977,7 @@ faeder = ''
 end 
 faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
-if text !== 'اكلك' or text !== 'اكلج' then 
+if text == 'اكلك' or text == 'اكلج' then 
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 faeder =  "ཻاٰ̲ھہﯛ૭ ب̲ꪰـﮧدٰتـٰۧﮧ ཻالٍُـّٰ̐ہكـِّﮧْٰٖرٰཻاﯛ૭يـِٰ̲ﮧ ཻالٍُـّٰ̐ہتـٰۧﮧعـ͜ާﮧْب̲ꪰـﮧཻانٰ̲̐ـﮧْٰ̲ھہ 卍🙃♛⁽ ֆ ̯͡“"
 else 
@@ -2985,7 +2985,7 @@ faeder = ''
 end 
 faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
-if text !== 'ها' or text !== 'هاا' then 
+if text == 'ها' or text == 'هاا' then 
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 faeder =  "ۿۿہآ رديِٰـﮧِۢنِٰـﮧِۢۿۿہ لِٰـِﮧۢﯛ̲୭ لِٰـِﮧۢآ ₎⇣🌚🔥 ⁞₎⇣"
 else 
@@ -3836,7 +3836,7 @@ if tonumber(result.id_) == tonumber(bot_owner) then
 faederdx(msg.chat_id_, msg.id_, 1, 'شو انت تمضرط تريد اهين تاج راسي مثلا ?', 1, 'md') 
 return false  
 end  
-local faeder != { "لك حيوان @"..username.." 100 نعال اسوكك بس تحجي فهمت ","لك فرخ @"..username.." اكل خره لا رجعك منين ما طلعت  ","حبيبي @"..username.." راح احاول احترمك هالمره بلكي تبطل حيونه ","فرخ دودكي  @"..username.." صير ادمي لا حطك بركبتي ",}
+local faeder = { "لك حيوان @"..username.." 100 نعال اسوكك بس تحجي فهمت ","لك فرخ @"..username.." اكل خره لا رجعك منين ما طلعت  ","حبيبي @"..username.." راح احاول احترمك هالمره بلكي تبطل حيونه ","فرخ دودكي  @"..username.." صير ادمي لا حطك بركبتي ",}
 faederdx(msg.chat_id_, result.id_, 1,''..faeder[math.random(#faeder)]..'', 1, 'html') 
 else  
 faederdx(msg.chat_id_, msg.id_, 1, '💥*¦*  العضو لا يوجد في المجموعه ', 1, 'md') 
@@ -3855,9 +3855,9 @@ if tonumber(result.sender_user_id_) == tonumber(bot_owner) then
 faederdx(msg.chat_id_, msg.id_, 1, '• دي لك تريد اهين تاج راسك ؟ 🌚', 1, 'md')
 return false
 end 
-local faeder != "• صار ستاذي 😌" 
+local faeder = "• صار ستاذي 😌" 
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md') 
-local faeder != {"• ها لك جرجف اليوم اكتلك واخري ع كبرك 😈","• حضينه مستنقع الجبات صير عاقل لا اهفك بالنعال 😒","• قاروره جاروره بلاع العيوره لا تندك باسيادك 😒","• خاب دي لا احط بكسمك الديفدي واركعك بعير ثري دي  فرخي ابن جبتي 😒"} 
+local faeder = {"• ها لك جرجف اليوم اكتلك واخري ع كبرك 😈","• حضينه مستنقع الجبات صير عاقل لا اهفك بالنعال 😒","• قاروره جاروره بلاع العيوره لا تندك باسيادك 😒","• خاب دي لا احط بكسمك الديفدي واركعك بعير ثري دي  فرخي ابن جبتي 😒"} 
 faederdx(msg.chat_id_, result.id_, 1,''..faeder[math.random(#faeder)]..'', 1, 'md') 
 end 
 if tonumber(msg.reply_to_message_id_) == 0 then
@@ -3875,9 +3875,9 @@ if tonumber(result.sender_user_id_) == tonumber(bot_owner) then
 faederdx(msg.chat_id_, msg.id_, 1, '• اموووووووواح احلا بوسه لمطوري 😻', 1, 'md')
 return false
 end 
-local faeder != "• صار ستاذي راح اتماصص وياه 🙊😻" 
+local faeder = "• صار ستاذي راح اتماصص وياه 🙊😻" 
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md') 
-local faeder != {"• تعالي حياتي خل نتماصص 😻👏","• اممممووووواااااح لصق الشفه 😻","• امح امح امح امح بوسه لو عسل 😼😻"} 
+local faeder = {"• تعالي حياتي خل نتماصص 😻👏","• اممممووووواااااح لصق الشفه 😻","• امح امح امح امح بوسه لو عسل 😼😻"} 
 faederdx(msg.chat_id_, result.id_, 1,''..faeder[math.random(#faeder)]..'', 1, 'md') 
 end 
 if tonumber(msg.reply_to_message_id_) == 0 then
@@ -3895,9 +3895,9 @@ if tonumber(result.sender_user_id_) == tonumber(bot_owner) then
 faederdx(msg.chat_id_, msg.id_, 1, '• اموووووووواح احلا بوسه لمطوري 😻', 1, 'md')
 return false
 end 
-local faeder != "• صار ستاذي راح اتماصص وياه 🙊😻" 
+local faeder = "• صار ستاذي راح اتماصص وياه 🙊😻" 
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md') 
-local faeder != {"• تعالي حياتي خل نتماصص 😻👏","• اممممووووواااااح لصق الشفه 😻","• امح امح امح امح بوسه لو عسل 😼😻"} 
+local faeder = {"• تعالي حياتي خل نتماصص 😻👏","• اممممووووواااااح لصق الشفه 😻","• امح امح امح امح بوسه لو عسل 😼😻"} 
 faederdx(msg.chat_id_, result.id_, 1,''..faeder[math.random(#faeder)]..'', 1, 'md') 
 end 
 if tonumber(msg.reply_to_message_id_) == 0 then
