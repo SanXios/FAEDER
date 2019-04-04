@@ -1100,7 +1100,7 @@ faederdx1:del("faeder:name"..result.id_)
 end
 end
 if result.first_name_ then 
-if dx and dx ~= result.fiorst_name_ then 
+if dx and dx ~= result.first_name_ then 
 local faeder_text = {
   "اسمك الجديد { "..result.first_name_.." }\n ليش غيرته 🌚😹",
   "اسمك الجديد { "..result.first_name_.." }\n مو حلو رجعه القديم ☹️👌",
@@ -1123,13 +1123,13 @@ if text then
 function faeder(extra,result,success)
 if result.id_ then 
 local dx = faederdx1:get("faeder:Userr"..result.id_)
-if not result.useorname_ then 
+if not result.username_ then 
 if dx then 
 faederdx(msg.chat_id_, msg.id_, 1, "حذف معرفه خمطو بساع بساع  \n هاذه معرفه : @"..dx, 1, 'html')
 faederdx1:del("faeder:Userr"..result.id_) 
 end
 end
-if result.usernoame_ then 
+if result.username_ then 
 if dx and dx ~= result.username_ then 
 local faeder_text = {
   'كمشتك ليش غيرت معرفك ولك 😹',
@@ -1154,13 +1154,13 @@ if text then
 function dx(extra,result,success)
 if result.id_ then 
 local dx2 = faederdx1:get("dx:photo"..result.id_)
-if not result.profile_phooto_ then 
+if not result.profile_photo_ then 
 if dx2 then 
 faederdx(msg.chat_id_, msg.id_, 1, "حذف كل صوره الحلو 😂👌🏻", 1, 'html')
 faederdx1:del("dx:photo"..result.id_) 
 end
 end
-if result.profile_phooto_ then 
+if result.profile_photo_ then 
 if dx2 and dx2 ~= result.profile_photo_.big_.persistent_id_ then 
 local dx_text = {
   "طالع صاك بالصوره الجديده ممكن نرتبط",
