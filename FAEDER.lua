@@ -7602,9 +7602,22 @@ else
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ تم قفل🔐 المجموعة لمدة "..mutept[1].." ساعة ⏱ من الأن وستفتح بشكل تلقائي بعد مضي الوقت المحدد🔓 •", 'md')
 end
 end
+if is_momod(msg.sender_user_id_, msg.chat_id_) then
+  if text:match("^[Uu]nlock gtime (%d+)$") then
+  local mutept = {string.match(text, "^[Uu]nlock gtime (%d+)$")}
+  local hour = string.gsub(mutept[1], 'h', '')
+  local num1 = tonumber(hour) * 3600
+  local num = tonumber(num1)
+  faederdx1:setex(FAEDER..'bot:unmuteall'..msg.chat_id_, num)
+  if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
+  faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ Lock all has been enable for ")
+  else
+  faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ تم قفل🔐 المجموعة لمدة ")
+  end
+  end
 if text:match("^فتح المجموعة  (%d+)$") then
 local unmutept[2] = {string.match(text, "^فتح المجموعة  (%d+)$")}
-faederdx1:del(FAEDER..'bot:unmuteall'..msg.chat_id_, num)
+faederdx1:set(FAEDER..'bot:unmuteall'..msg.chat_id_, num)
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, "🎖⁞ UnLock all has been enable for ")
 else
