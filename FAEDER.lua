@@ -1088,95 +1088,7 @@ function getUser(user_id, cb)
   user_id_ = user_id
     }, cb, nil)
   end
-local msg = data.message_
-text = msg.content_.text_
-if text then 
-function faeder(extra,result,success)
-if result.id_ then 
-local dx = faederdx1:get("faeder:name"..result.id_)
-if not result.first_name_ then 
-if dx then 
-faederdx1:del("faeder:name"..result.id_) 
-end
-end
-if result.first_name_ then 
-if dx and dx ~= result.first_name_ then 
-local faeder_text = {
-  "اسمك الجديد { "..result.first_name_.." }\n ليش غيرته 🌚😹",
-  "اسمك الجديد { "..result.first_name_.." }\n مو حلو رجعه القديم ☹️👌",
-  "ليش غيرت اسمك { "..result.first_name_.." }\n قطيت احد حبي ؟ 🌚😹",
-  "اسمك الجديد يخبل ضلعي 🤭😹{ "..result.first_name_.." }", 
-}
-dxx = math.random(#faeder_text)
-faederdx(msg.chat_id_, msg.id_, 1, faeder_text[dxx], 1, 'html')
-end  
-faederdx1:set("faeder:name"..result.id_, result.first_name_)  
-end
-end
-end
-getUser(msg.sender_user_id_, faeder)
-end
 
-local msg = data.message_
-text = msg.content_.text_
-if text then 
-function faeder(extra,result,success)
-if result.id_ then 
-local dx = faederdx1:get("faeder:Userr"..result.id_)
-if not result.username_ then 
-if dx then 
-faederdx(msg.chat_id_, msg.id_, 1, "حذف معرفه خمطو بساع بساع  \n هاذه معرفه : @"..dx, 1, 'html')
-faederdx1:del("faeder:Userr"..result.id_) 
-end
-end
-if result.username_ then 
-if dx and dx ~= result.username_ then 
-local faeder_text = {
-  'كمشتك ليش غيرت معرفك ولك 😹',
-  "ليش غيرت معرف طشوك بقنات انحراف ؟ ⛷😹",
-  "حلو معرفك الجديد منين خمطته 😹",
-  "لحكو غير معرفه خمطو \n هذا معرفه القديم 🌚😹 @"..result.username_.."",
-}
-dxx = math.random(#faeder_text)
-faederdx(msg.chat_id_, msg.id_, 1, faeder_text[dxx], 1, 'html')
-end  
-faederdx1:set("faeder:Userr"..result.id_, result.username_) 
-end
-end
-end
-getUser(msg.sender_user_id_, faeder)
-end
-
-
-local msg = data.message_
-text = msg.content_.text_
-if text then 
-function dx(extra,result,success)
-if result.id_ then 
-local dx2 = faederdx1:get("dx:photo"..result.id_)
-if not result.profile_photo_ then 
-if dx2 then 
-faederdx(msg.chat_id_, msg.id_, 1, "حذف كل صوره الحلو 😂👌🏻", 1, 'html')
-faederdx1:del("dx:photo"..result.id_) 
-end
-end
-if result.profile_photo_ then 
-if dx2 and dx2 ~= result.profile_photo_.big_.persistent_id_ then 
-local dx_text = {
-  "طالع صاك بالصوره الجديده ممكن نرتبط",
-  "صوره فيطي الجديده غيرها",
-  "صورتك الجديده فد شي 😑😹",
-  "حطيت صورتي شوفوني اني صاك بنات 🙄😹",
-}
-dx3 = math.random(#dx_text)
-faederdx(msg.chat_id_, msg.id_, 1, dx_text[dx3], 1, 'html')
-end  
-faederdx1:set("dx:photo"..result.id_, result.profile_photo_.big_.persistent_id_) 
-end
-end
-end
-getUser(msg.sender_user_id_, dx)
-end
 local function openChat(chat_id,dl_cb)
 tdcli_function ({
 ID = "GetChat",
@@ -10416,3 +10328,7 @@ tdcli_function ({ID="GetChats", offset_order_="9223372036854775807", offset_chat
 end
 -----------------------------------------faeder------------------------------------------------------ 
 end
+-- END VERSION FAEDER DX 
+-- all the file by faeder dx @pro_c9 
+-- join in chennel @faeder_ch 
+-- join in chennel @team_faeder
