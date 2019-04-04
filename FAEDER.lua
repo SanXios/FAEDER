@@ -1082,13 +1082,7 @@ disable_notification_ = disable_notification,
 from_background_ = 1
 }, dl_cb, nil)
 end
-function getUser(user_id, cb)
-    tdcli_function ({
-  ID = "GetUser",
-  user_id_ = user_id
-    }, cb, nil)
-  end
-----------------faeder
+---------------faeder
 ------------------
 function string:split(sep)
 local sep, fields = sep or ":", {}
@@ -1100,7 +1094,7 @@ function faedr(msg,data)
 local msg = data.message_
 local text = msg.content_.text_
 local caption = msg.content_.caption_
-if text ==('مساند تفعيل') and not is_admin(msg.sender_user_id_, msg.chat_id_) and not faederdx1:get(FAEDER..'lock:bot:free'..bot_id) then
+if text ==('تفعيل') and not is_admin(msg.sender_user_id_, msg.chat_id_) and not faederdx1:get(FAEDER..'lock:bot:free'..bot_id) then
 function adding(extra,result,success)
 local function promote_admin(extra, result, success)
 local num = 0
@@ -2517,7 +2511,7 @@ faederdx1:incrby('faeder:'..bot_id..'nummsg'..msg.chat_id_..iduserr,numadded)
 faederdx(msg.chat_id_, msg.id_,  1, "🚦⁞ تم اضافه له *{ "..numadded..' }* رساله •', 1, 'md')
 end
 end
-if text:match("بيسليبلسل")  and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if text:match("طيز") or text:match("ديس") or text:match("انيجمك") or text:match("انيج") or text:match("نيج") or text:match("ديوس") or text:match("عير") or text:match("كسختك") or text:match("كسمك") or text:match("كسربك") or text:match("بلاع") or text:match("ابو العيوره") or text:match("منيوج") or text:match("كحبه") or text:match("اخ الكحبه") or text:match("اخو الكحبه") or text:match("الكحبه") or text:match("كسك") or text:match("طيزك") or text:match("عير بطيزك") or text:match("كس امك") or text:match("امك الكحبه") or text:match("صرم") or text:match("عيرك") or text:match("عير بيك") or text:match("صرمك") and is_owner(msg.sender_user_id_, msg.chat_id_) then
 if not faederdx1:get(FAEDER.."fshar"..msg.chat_id_) and not is_owner(msg.sender_user_id_, msg.chat_id_) then
 local id = msg.id_
 local msgs = { [0] = id}
@@ -2535,7 +2529,7 @@ delete_msg(chat, msgs)
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ ممنوع التكلم باللغه الفارسيه هنا  •', 1, 'md')   
 end 
 end
-if text:match("بلسل نكس") and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if text:match("شيعي نكس") or text:match("سني نكس") or text:match("شيعه") or text:match("الشيعه") or text:match("السنه") or text:match("سني") or text:match("طائفتكم") or text:match("اني سني") or text:match("اني شيعي") or text:match("انا سني") or text:match("انا شيعي") and is_owner(msg.sender_user_id_, msg.chat_id_) then
 if not faederdx1:get(FAEDER.."taf"..msg.chat_id_) and not is_owner(msg.sender_user_id_, msg.chat_id_) then
 local id = msg.id_
 local msgs = { [0] = id}
@@ -2544,7 +2538,7 @@ delete_msg(chat, msgs)
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ ممنوع التكلم بالطائفيه هنا  •', 1, 'md')   
 end 
 end
-if text:match("بشبشب سيشبشبا") and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if text:match("خره بالله") or text:match("خبربك") or text:match("خره بربك") or text:match("الله الكواد") or text:match("خره بمحمد") or text:match("كسم الله") or text:match("كسم ربك") or text:match("كسربك") or text:match("كسختالله") or text:match("كسخت الله") or text:match("خره بدينك") or text:match("خرهبدينك") or text:match("كسالله") and is_owner(msg.sender_user_id_, msg.chat_id_) then
 if not faederdx1:get(FAEDER.."kaf"..msg.chat_id_) and not is_owner(msg.sender_user_id_, msg.chat_id_) then
 local id = msg.id_
 local msgs = { [0] = id}
@@ -2563,7 +2557,7 @@ faederdx1:set(FAEDER..hash, glink)
 if faederdx1:get(FAEDER.."lang:gp:" .. msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞  *Support link has been Saved*  •", 1, "md")
 else
-faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ تم حفض رابط قروب الدعم •", 1, "md")
+faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ تم حفض رابط كروب الدعم •", 1, "md")
 end
 faederdx1:del(FAEDER.."bot:support:link" .. msg.sender_user_id_)
 elseif msg.content_.text_:match("^@(.*)[Bb][Oo][Tt]$") or msg.content_.text_:match("^@(.*)_[Bb][Oo][Tt]$") then
@@ -2673,7 +2667,7 @@ local faeder22 = "🌿⁞ الكلمه "..faeder.." •\n🍄⁞ تم زخرفت
 number=0   
 for v=1,#result do  
 number=number+1   
-local faeder = { ' •🔥✨ ', '🔅🔥﴿', '•  ❥˓  ', '💝﴿ֆ', ' • 🐼🌿', ' •🙊💙', '-🐥✨ ', ' 〄😻‘',' ⚡️', '- ⁽🌷', '🔥“', '💭', '', '🎩🍿','“̯ 🐼💗 ', '🐝🍷','❥̚͢₎ 🐣', '👄‘', ' 💭ۦ', ' 💛💭ۦ', ' ⚡️ۦ','℡ᴖ̈', '💋☄️₎ۦ˛', '♩',' ☻🔥“ٰۦ', '℡ ̇ ✨🐯⇣✦', '⁞♩⁽💎🌩₎⇣✿','ۦٰ‏┋❥ ͢˓🦁💛ۦ‏', '⚡️♛ֆ₎', '♛⇣🐰☄️₎✦', '⁾⇣✿💖┊❥', ' ₎✿🎃 ⁞“❥', '😴✿⇣', '❥┊⁽ ℡🦁' }   
+local faeder = { ' •🔥✨ ', '🔅🔥﴿', '•  ❥˓  ', '💝﴿ֆ', ' • 🐼🌿', ' •🙊💙', '-🐥✨ ', ' 〄😻‘',' ⚡️', '- ⁽🌷', '🔥“', '💭', '', '🎩🍿','“̯ 🐼💗 ', '🐝🍷','❥̚͢₎ 🐣', '👄‘', ' 💭ۦ', ' 💛💭ۦ', ' ⚡️ۦ','℡ᴖ̈', '💋☄️₎ۦ˛', '♩',' ☻🔥“ٰۦ', '℡ ̇ ✨🐯⇣✦', '⁞♩⁽💎🌩₎⇣✿','ۦٰ‏┋❥ ͢˓🦁💛ۦ‏', '⚡️♛ֆ₎', '♛⇣🐰☄️₎✦', '⁾⇣✿💖┊❥', ' ₎✿🎃 ⁞“❥', '😴✿⇣', '❥┊⁽ ℡🦁' }   
 faeder22 = faeder22..''..number.." • `"..result[number]..''..faeder[math.random(#faeder)].."`\n\n"    
 end  
 faederdx(msg.chat_id_, 0, 1, faeder22, 1, 'md') 
@@ -2781,7 +2775,7 @@ local faeder22 = "🌿⁞ الكلمه "..faeder.." •\n🍄⁞ تم زخرفت
 number=0     
 for v=1,#result do     
 number=number+1     
-local faeder = { '🔥', '🔅﴿', '❥˓ ', '💝﴿', '🐼🌿', '🙊💙', '🐥✨', '😻‘','⚡️', '⁽🌷', '🔥“', '💭', '🍿','🐼💗 ', '🐝🍷','❥̚͢₎🐣', '👄‘', ' 💭ۦ',' 🎉ۦ', ' ⚡️ۦ','℡̈', '💋☄️₎ۦ˛', '♩',' ☻🔥“ٰۦ', '℡ ̇ ✨🐯⇣✦', '⁞♩⁽💎🌩₎⇣✿','ٰ❥ ͢ۦ‏', '⚡️ֆ₎', '🐰☄️', '⁾❥', '✿🎃❥', '✿⇣', '❥℡🦁' }     
+local faeder = { '🔥', '🔅﴿', '❥˓ ', '💝﴿', '🐼🌿', '🙊💙', '🐥✨', '😻‘','⚡️', '⁽🌷', '🔥“', '💭', '🍿','🐼💗 ', '🐝🍷','❥̚͢₎🐣', '👄‘', ' 💭ۦ',' 🎉ۦ', ' ⚡️ۦ','℡̈', '💋☄️₎ۦ˛', '♩',' ☻🔥“ٰۦ', '℡ ̇ ✨🐯⇣✦', '⁞♩⁽💎🌩₎⇣✿','ٰ❥ ͢ۦ‏', '⚡️ֆ₎', '🐰☄️', '⁾❥', '✿🎃❥', '✿⇣', '❥℡🦁' }     
 faeder22 = faeder22..''..number.." • `"..result[number]..''..faeder[math.random(#faeder)].."`\n\n"    
 end     
 faederdx(msg.chat_id_, 0, 1, faeder22, 1, 'md')     
@@ -2804,7 +2798,108 @@ print("Return False [Lock] [Cmd]")
 return false
 else  
 --------------------------------------faeder
-
+if text == 'دي' or text == 'دي لك' then 
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "يـٰ̲ـہمـٰ̲ـہشـٰ̲ـہوٰكـٰ̲ـہ بـٰ̲ـہيـٰ̲ـہهـٰ̲ـہاٰ حـٰ̲ـہيـٰ̲ـہوٰاٰنـٰ̲ـہ ♯⋮ֆ🗡🦁"
+else 
+faeder = ''
+end
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == 'سلام' or text == 'السلام عليكم' or text == 'سلام عليكم' then 
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "عٰہٰٖلہٰٖيٰہٰٖكٰہٰٖمٰہٰٖ اٰلہٰٖسٰہٰٖلہٰٖاٰمٰہٰٖ اٰغٰہٰٖاٰتٰہٰٖيٰہٰٖ ❊😼🎶ֆ"
+else 
+faeder = ''
+end
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == '😭💔' or text == '😭😭' or text == '😭😭😭' or text == '😿💔' or text == '??😭' or text == '😭😭😭' or text == '😭😭😭😭' then      
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "لتَہَٰبّہجْۧيِٰہ حہٰٰيِٰہآتَہَٰيِٰہ ف͒ہٰٰديِٰہتَہَٰڪٰྀہٰٰٖ ║😿 ₍♚⁾??"
+else 
+faeder = ''
+end 
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == '🌚💔' or text == '💔🌚' or text == '🚶‍♂💔' or text == '💔' or text == '😔💔' or text == '🚶‍♀💔' or text == '😭' then      
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "تَہَٰ؏ۤـہآل آشِٰہٰٰڪٰྀہٰٰٖيِٰہليِٰہ ٰ̲ھہمٰ̲ہوِمٰ̲ہڪٰྀہٰٰٖ ⁞✦⁽😭🔥₎“ٰۦ"
+else 
+faeder = ''
+end 
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == 'باي' or text == 'بااي' or text == 'اروح' or text == 'اروح احسن' or text == 'اولي احسن' or text == 'راح اروح' or text == 'باي انام' then      
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "خ̲ـꨩﮧلٍُـّٰ̐ہيـِٰ̲ﮧكـِّﮧْٰٖ دٰཻا ཻاضـٰ๋۪͜ﮧٰح̲ꪳـﮧكـِّﮧْٰٖ عـ͜ާﮧْلٍُـّٰ̐ہيـِٰ̲ﮧكـِّﮧْٰٖ ⩩ཻ🌞ֆ﴾"
+else 
+faeder = ''
+end 
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == 'هلو' or text == 'هلاو' or text == 'هلا' or text == 'هلاوو' or text == 'هيلاو' or text == 'هيلاوو' or text == 'هلاا' then      
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "♛#ֆ‘﴾ۗ ʟ̤ɾʅ᎗̣ɹᓗ ᎗̈ɹȊg⅃᎗බ"
+else 
+faeder = ''
+end 
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == 'شونك' or text == 'شونج' or text == 'شلونك' or text == 'شلونج' or text == 'شونكم' or text == 'شلونكم' or text == 'شلخبار' then      
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "آنَِٰہيِٰہ تَہَٰمٰ̲ہآمٰ̲ہ آنَِٰہتَہَٰ شِٰہٰٰلوِنَِٰہڪٰྀہٰٰٖ  ⁽࿑♚꫶😼ֆ﴾"
+else 
+faeder = ''
+end 
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == 'وينك' or text == 'وينج' then 
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "عـٰ̲ـہوٰفـٰ̲ـہنـٰ̲ـہيـٰ̲ـہ جـٰ̲ـہاٰيـٰ̲ـہ اٰزٰحـٰ̲ـہفـٰ̲ـہ 🐼⚡️ֆ‘﴾"
+else 
+faeder = ''
+end 
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == 'نايمين' or text == 'ميتين' then 
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "آنَِٰہيِٰہ ڪٰྀہٰٰٖآ؏ۤـہد آحہٰٰرسٰٰٓڪٰྀہٰٰٖمٰ̲ہ ℡̮⇣┆👑😻⇣ۦ"
+else 
+faeder = ''
+end 
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == 'اكلك' or text == 'اكلج' then 
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "ཻاٰ̲ھہﯛ૭ ب̲ꪰـﮧدٰتـٰۧﮧ ཻالٍُـّٰ̐ہكـِّﮧْٰٖرٰཻاﯛ૭يـِٰ̲ﮧ ཻالٍُـّٰ̐ہتـٰۧﮧعـ͜ާﮧْب̲ꪰـﮧཻانٰ̲̐ـﮧْٰ̲ھہ 卍🙃♛⁽ ֆ ̯͡“"
+else 
+faeder = ''
+end 
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == 'ها' or text == 'هاا' then 
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "ۿۿہآ رديِٰـﮧِۢنِٰـﮧِۢۿۿہ لِٰـِﮧۢﯛ̲୭ لِٰـِﮧۢآ ₎⇣🌚🔥 ⁞₎⇣"
+else 
+faeder = ''
+end
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == 'سورس فايدر' or text == 'هذا سورس فايدر' then 
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "لآ سٰٰٓوِرسٰٰٓ خٰ̐ہآلتَہَٰڪٰྀہٰٰٖ ديِٰہ لڪٰྀہٰٰٖ ┋՞❁ 🌞?? ﴾"
+else 
+faeder = ''
+end
+faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
+end
+if text == 'فايدر' or text == 'وين فايدر' then 
+if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
+faeder =  "؏ۤـہوِف͒ہٰٰ مٰ̲ہطۨہٰٰوِريِٰہ مٰ̲ہآ ف͒ہٰٰآرغہٰٰلڪٰྀہٰٰٖ ┊ާ͢🌚🔥₎⇣"
+else 
+faeder = ''
+end
 faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
 if text == 'بوت' or text == 'هذا بوت' then 
@@ -3066,7 +3161,7 @@ else
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ لم يتم تعيين القناة •', 1, 'md')
 end end end
 ------------------------------------ With Pattern faeder-------------------------------------------
-if text:match("^[Ll]ink$") or text:match("^سان الرابط$") then
+if text:match("^[Ll]ink$") or text:match("^الرابط$") then
 local link = faederdx1:get(FAEDER.."bot:group:link"..msg.chat_id_)
 if link then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -3122,11 +3217,11 @@ if is_admin(msg.sender_user_id_, msg.chat_id_) then
 if text:match("^[Ll]eave$") or text:match("^غادر$") then
 chat_leave(msg.chat_id_, bot_id)
 faederdx1:srem(FAEDER.."bot:groups",msg.chat_id_)
-faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ قروبكم مرض راح اغادر باي •', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ طبكم مرض راح اغادر باي •', 1, 'md')
 end
 end
 --------------faeder
-if (text:match("^سان موقعي$") or text:match("^سان رتبيتي$")) and faeder11(msg) then
+if (text:match("^موقعي$") or text:match("^رتبتي$")) and faeder11(msg) then
 function get_me(extra,result,success)
 local faedery = (faederdx1:get('faeder:'..bot_id..'nummsg'..msg.chat_id_..msg.sender_user_id_) or 0)
 local faeder = faederdx1:get(FAEDER..'user:msgs'..bot_id..os.date('%d')..':'..msg.chat_id_..':'..msg.sender_user_id_) or 0
@@ -3266,7 +3361,7 @@ end
 end
 getUser(msg.sender_user_id_,get_me)
 end
-if text:match("^سان الرتبه$") and msg.reply_to_message_id_ ~= 0 then
+if text:match("^الرتبه$") and msg.reply_to_message_id_ ~= 0 then
 function rt_by_reply(extra, result, success) 
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
@@ -3306,7 +3401,7 @@ else
 faeder1 = "عضو فقط 🚩"
 end
 end
-local faeder = '*🌿╿❯ اهلا بك عزيزي { '..renk_faeder(msg)..' }*\n*🍄┊❯ رتبه المستخدم* { '..faeder_res..' }\n*💥┊❯ في البوت { '..faeder1..' }*\n*✨┊❯ في القروب { '..renk_gps..' }*\n'
+local faeder = '*🌿╿❯ اهلا بك عزيزي { '..renk_faeder(msg)..' }*\n*🍄┊❯ رتبه المستخدم* { '..faeder_res..' }\n*💥┊❯ في البوت { '..faeder1..' }*\n*✨┊❯ في الكروب { '..renk_gps..' }*\n'
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md') 
 end,nil)
 end
@@ -3406,25 +3501,35 @@ end
 end
 if text:match("^source$") or text:match("^اصدار$") or text:match("^الاصدار$") or  text:match("^السورس$") or text:match("^سورس$") then 
 local text =  [[
-🚦⁞ مرحبا بك في البوت المساند للدرع العربي   •
-[🗳⁞ مطور البوت •](t.me/sanx7)
-[🗳⁞ تواصل المحظورين •](t.me/@sanXios_bot)
-[🗳⁞ قناة المطور •](t.me/sanxiosteam)
+🚦⁞ مرحبا بك في سورس فايدر التحديث الجديد •
+
+📠⁞  طريقه التنصيب في الاسفل •
+
+[💰⁞  اضغط هنا لتنصيب السورس •](https://t.me/joinchat/AAAAAEy5f7GaJDiooN1V5w)
+
+
+[🗳⁞ مطور السورس •](t.me/pro_c9)
+[🗳⁞ تواصل المحظورين •](t.me/ll750kll_bot)
+
+[🗳⁞ قناة السورس •](t.me/faeder_ch)
+[🗳⁞ قناة التحديثات •](t.me/team_faeder)
+
+[🗳⁞  كروب الدعم •](https://t.me/joinchat/B0N8JVGM9Ez8PKuyT43D5A)
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 --------faeder
-if text:match("^[Gg][Rr][Oo][Uu][Pp][Ss]$") and is_admin(msg.sender_user_id_, msg.chat_id_) or text:match("^القروبات$") and is_admin(msg.sender_user_id_, msg.chat_id_) then
+if text:match("^[Gg][Rr][Oo][Uu][Pp][Ss]$") and is_admin(msg.sender_user_id_, msg.chat_id_) or text:match("^الكروبات$") and is_admin(msg.sender_user_id_, msg.chat_id_) then
 local faeder = faederdx1:scard(FAEDER.."bot:groups")
 local dx = faederdx1:scard("faeder:addg"..bot_id) or 0
 local users = faederdx1:scard(FAEDER.."bot:userss")
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ *Groups :*  '..gps..'', 1, 'md')
 else
-faederdx(msg.chat_id_, msg.id_, 1, '*📌⁞ اعضاء الخاص { '..users..' }\n🚦⁞ عدد قروبات { '..faeder..' }\n🎖⁞ القروبات المفعله { '..dx..' }\n⚜⁞ الغير مفعله {'..(faeder - dx)..'} *', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '*📌⁞ اعضاء الخاص { '..users..' }\n🚦⁞ عدد كروبات { '..faeder..' }\n🎖⁞ الكروبات المفعله { '..dx..' }\n⚜⁞ الغير مفعله {'..(faeder - dx)..'} *', 1, 'md')
 end
 end  
-if  text:match("^[Mm]sg$") or text:match("^سان رسائلي$") and msg.reply_to_message_id_ == 0  then
+if  text:match("^[Mm]sg$") or text:match("^رسائلي$") and msg.reply_to_message_id_ == 0  then
 local user_msgs = faederdx1:get(FAEDER..'user:msgs'..msg.chat_id_..':'..msg.sender_user_id_)
 local faeder = faederdx1:get(FAEDER..'user:msgs'..bot_id..os.date('%d')..':'..msg.chat_id_..':'..msg.sender_user_id_) or 0
 local faedery = (faederdx1:get('faeder:'..bot_id..'nummsg'..msg.chat_id_..msg.sender_user_id_) or 0)
@@ -3434,7 +3539,7 @@ else
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ اهلا وسهلا عزيزي •\n📬⁞ رسائلك الحقيقيه {*"..user_msgs.." }* •\n📬⁞ رسائلك المضافه {*"..faedery.." }* •\n📬⁞ رسائلك اليوم *{"..(faeder).."} •*\n📬⁞ مجموع رسائلك {*"..(user_msgs + faedery).." }* \n📖⁞ في المجموعه •", 1, 'md')
 end
 end
-if text:match("^[Gg]p id$") or text:match("^سان ايدي المجموعه$") then
+if text:match("^[Gg]p id$") or text:match("^ايدي المجموعه$") then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 texts = "🚦⁞ Group ID ~ "..msg.chat_id_
 else
@@ -3443,7 +3548,7 @@ end
 faederdx(msg.chat_id_, msg.id_, 1, texts, 1, 'md')
 end
 -------------------------------------faeder----------------------------------------------------------
-if text:match("^سان ايدي$") then 
+if text:match("^ايديي$") then 
 faederdx(msg.chat_id_, msg.id_, 1,'`'..msg.sender_user_id_..'`', 1, 'md') 
 end
 ----------faeder
@@ -3610,7 +3715,7 @@ end
 ---------------faeder
 if (msg.sender_user_id_) then
 local text = msg.content_.text_:gsub("[Pp]rice", "Nerkh")
-if text:match("^[Nn]erkh$") or text:match("^سان المطور$") then
+if text:match("^[Nn]erkh$") or text:match("^المطور$") then
 local nerkh = faederdx1:get(FAEDER.."nerkh")
 if nerkh then
 faederdx(msg.chat_id_, msg.id_, 1, nerkh, 1, "md")
@@ -3622,8 +3727,8 @@ end
 end 
 end 
 ---------------faeder
-if text and text:match('^بسيليبل @(.*)')  then 
-local username = text:match('^بسيليبل @(.*)') 
+if text and text:match('^هينه @(.*)')  then 
+local username = text:match('^هينه @(.*)') 
 function faeder(extra,result,success)
 if result.id_ then  
 if tonumber(result.id_) == tonumber(bot_id) then  
@@ -3643,10 +3748,10 @@ end
 resolve_username(username,faeder)
 end
 ------------------faeder
-if text:match("^بسيليبل$") then
+if text:match("^هينه$") then
 function hena(extra, result, success)
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then 
-faederdx(msg.chat_id_, msg.id_, 1, '•  غبي لعد 🌚😂 تبي اهين نفسي ؟  😌😂', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, '• شكد غبي لعد 🌚😂 تريدني اهين نفسي ؟ دكسمك 😌😂', 1, 'md') 
 return false  
 end  
 if tonumber(result.sender_user_id_) == tonumber(bot_owner) then  
@@ -3663,7 +3768,7 @@ else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),hena)   
 end
 end
-if text:match("^بيلابينكتسلا$") or text:match("^بعد يبلسل$") or text:match("^ضل سيبلس$") then
+if text:match("^بوسها$") or text:match("^بعد بوسها$") or text:match("^ضل بوس$") then
 function hena(extra, result, success)
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then 
 faederdx(msg.chat_id_, msg.id_, 1, '• حياتي بس فهمني شون ابوس نفسي وتدلل 😔😂', 1, 'md') 
@@ -3683,7 +3788,7 @@ else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),hena)   
 end
 end
-if text:match("^لبتلمبتال$") or text:match("^بعد بيل$") or text:match("^ضل بيبلوس$") then
+if text:match("^بوسه$") or text:match("^بعد بوسه$") or text:match("^ضل بوس$") then
 function hena(extra, result, success)
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then 
 faederdx(msg.chat_id_, msg.id_, 1, '• حياتي بس فهمني شون ابوس نفسي وتدلل 😔😂', 1, 'md') 
@@ -3703,35 +3808,35 @@ else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),hena)   
 end
 end
-if text:match("^رفع ادمن بالقروب$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
+if text:match("^رفع ادمن بالكروب$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
 function promote_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم رفعه « ادمن بالقروب » *', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم رفعه « ادمن بالكروب » *', 1, 'md')
 end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end
-if text:match("^تنزيل ادمن بالقروب$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
+if text:match("^تنزيل ادمن بالكروب$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
 function promote_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *ادمن القروب* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم تنزيله « عضو » *', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *ادمن الكروب* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم تنزيله « عضو » *', 1, 'md')
 end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end 
-if text:match("^سان رفع بكل الصلاحيات$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
+if text:match("^رفع بكل الصلاحيات$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ then
 function promote_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=True")
-faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم رفعه « ادمن بالقروب بكل الصلاحيات »\n👤╿❯ صلاحياته الان •\n☑️┊❯ تغيير اسم المجموعه •\n☑️┊❯ حذف الرسائل •\n☑️┊❯ الدعوه بالرابط •\n☑️┊❯ تثبيت الرسائل •\n☑️╽❯ اضافه مشرفين •*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ *تم رفعه « ادمن بالكروب بكل الصلاحيات »\n👤╿❯ صلاحياته الان •\n☑️┊❯ تغيير اسم المجموعه •\n☑️┊❯ حذف الرسائل •\n☑️┊❯ الدعوه بالرابط •\n☑️┊❯ تثبيت الرسائل •\n☑️╽❯ اضافه مشرفين •*', 1, 'md')
 end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
@@ -3759,7 +3864,7 @@ end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end
 ------------------------------------------faeder-----------------------------------------------------
-local text = msg.content_.text_:gsub('سان رفع ادمن','Promote')
+local text = msg.content_.text_:gsub('رفع ادمن','Promote')
 if text:match("^[Pp]romote$") and is_owner(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ ~= 0  then
 function promote_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
@@ -3825,7 +3930,7 @@ end
 faederdx1:sadd(FAEDER..'bot:momod:'..msg.chat_id_, ap[2])
 end
 -----------------------------------------faeder------------------------------------------------------
-local text = msg.content_.text_:gsub('سان تمزيل ادمن','Demote')
+local text = msg.content_.text_:gsub('تنزيل ادمن','Demote')
 if text:match("^[Dd]emote$") and is_owner(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ ~= 0 then
 function demote_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
@@ -3894,7 +3999,7 @@ faederdx1:srem(FAEDER..hash, ap[2])
 end
 -----------------------------------------faeder------------------------------------------------------
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
-local text = msg.content_.text_:gsub('سان رفع مميز','Setvip')
+local text = msg.content_.text_:gsub('رفع مميز','Setvip')
 if text:match("^[Ss]etvip$") and msg.reply_to_message_id_ ~= 0  then
 function promote_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
@@ -3960,7 +4065,7 @@ end
 faederdx1:sadd(FAEDER..'bot:vipmem:'..msg.chat_id_, ap[2])
 end
 -------------------------------------faeder----------------------------------------------------------
-local text = msg.content_.text_:gsub('سان تنزيل مميز','Demvip')
+local text = msg.content_.text_:gsub('تنزيل مميز','Demvip')
 if text:match("^[Dd]emvip$") and msg.reply_to_message_id_ ~= 0 then
 function demote_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
@@ -4030,7 +4135,7 @@ end
 end
 ----------------------------------------faeder--------------------------------------------------------------       
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^[Dd]el$") or text:match("^سان مسح$") and msg.reply_to_message_id_ ~= 0 then
+if text:match("^[Dd]el$") or text:match("^مسح$") and msg.reply_to_message_id_ ~= 0 then
 local id = msg.id_
 local msgs = {[0] = id}
 delete_msg(msg.chat_id_,{[0] = msg.reply_to_message_id_})
@@ -4048,7 +4153,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم تعطيل الحظر •', 1, 
 end
 end
 -----------------------------------------faeder-----------------------------------------------------
-local text = msg.content_.text_:gsub('سان حظر','Ban') 
+local text = msg.content_.text_:gsub('حظر','Ban') 
 if text:match("^[Bb]an$") and msg.reply_to_message_id_ ~= 0 then
 if not is_monsh(msg.sender_user_id_, msg.chat_id_) and faederdx1:get("faeder:lock:ban"..bot_id..msg.chat_id_) then 
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ لا تستطيع الحظر او الطرد •\n🌿⁞ لانه معطل من قبل المنشئ •', 1, 'md')
@@ -4136,7 +4241,7 @@ end
 end
 end
 -----------------------------------faeder------------------------------------------------------------
-local text = msg.content_.text_:gsub('سان مسح الكل','Delall')
+local text = msg.content_.text_:gsub('مسح الكل','Delall')
 if text:match("^[Dd]elall$") and msg.reply_to_message_id_ ~= 0 then
 function delall_by_reply(extra, result, success)
 del_all_msgs(result.chat_id_, result.sender_user_id_)
@@ -4270,7 +4375,7 @@ end
 end
 end
 -------------------------------------faeder--------------------------------------------------------
-local text = msg.content_.text_:gsub('سان حظر عام','Banall')
+local text = msg.content_.text_:gsub('حظر عام','Banall')
 if text:match("^[Bb]anall$") and is_sudo(msg) and msg.reply_to_message_id_ then
 function gban_by_reply(extra, result, success)
 local gps = faederdx1:scard(FAEDER.."bot:groups")
@@ -4335,7 +4440,7 @@ faederdx1:set(FAEDER..'bot:gban:'..ap[2],true)
 faederdx1:sadd(FAEDER..hash, ap[2])
 end
 ---------------------------------------faeder--------------------------------------------------------
-local text = msg.content_.text_:gsub('سان الغاء العام','unbanall')
+local text = msg.content_.text_:gsub('الغاء العام','unbanall')
 if text:match("^[Uu]nbanall$") and is_sudo(msg) and msg.reply_to_message_id_ then
 function ungban_by_reply(extra, result, success)
 local gps = faederdx1:scard(FAEDER.."bot:groups")
@@ -4398,7 +4503,7 @@ end
 end
 end
 -----------------------------------------faeder------------------------------------------------------
-local text = msg.content_.text_:gsub('سان كتم','Muteuser')
+local text = msg.content_.text_:gsub('كتم','Muteuser')
 if text:match("^[Mm]uteuser$") and msg.reply_to_message_id_ ~= 0 then
 function mute_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
@@ -4468,7 +4573,7 @@ end
 end
 end
 ------------------------------------faeder-----------------------------------------------------------
-local text = msg.content_.text_:gsub('سان الغاء كتم','Unmuteuser')
+local text = msg.content_.text_:gsub('الغاء كتم','Unmuteuser')
 if text:match("^[Uu]nmuteuser$") and msg.reply_to_message_id_ ~= 0 then
 function unmute_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
@@ -4552,7 +4657,7 @@ end
 end 
 ------------
 if is_admin(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ ~= 0 then
-if text:match("^سان رفع منشئ$") then 
+if text:match("^رفع منشئ$") then 
 function setmonsh_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
@@ -4579,7 +4684,7 @@ end
 end
 --------------------------------------------faedee---------------------------------------------------
  if is_admin(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ ~= 0 then
-if text:match("^سان رفع منشئ$") then
+if text:match("^رفع منشئ$") then
 function setmonsh_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
@@ -4606,8 +4711,8 @@ end
 end
 --------------------------------------------faedee---------------------------------------------------
 if is_admin(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^سان رفع منشئ @(.*)$") then
-local ap = {string.match(text, "^(سان رفع منشئ) @(.*)$")}
+if text:match("^رفع منشئ @(.*)$") then
+local ap = {string.match(text, "^(رفع منشئ) @(.*)$")}
 function setmonsh_by_username(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.id_)
 local faeder_res = user_info_
@@ -4634,8 +4739,8 @@ end
 end
 --------------------------------------faeder---------------------------------------------------------
 if is_admin(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^سان رفع منشئ (%d+)$") then
-local ap = {string.match(text, "^(سان رفع منشئ) (%d+)$")}
+if text:match("^رفع منشئ (%d+)$") then
+local ap = {string.match(text, "^(رفع منشئ) (%d+)$")}
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. ap[2])
 local faeder_res = user_info_
 if user_info_ then
@@ -4650,7 +4755,7 @@ end
 end 
 ----------------------------------------faeder-------------------------------------------------------
 if is_admin(msg.sender_user_id_) and msg.reply_to_message_id_ ~= 0 then
-if text:match("^سان تنزيل منشئ$") then
+if text:match("^تنزيل منشئ$") then
 function demonsh_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
@@ -4677,9 +4782,9 @@ end
 end
 ----------------------------------------faeder-------------------------------------------------------
 if is_admin(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^سان تنزيل المنشئ @(.*)$") then
+if text:match("^تنزيل المنشئ @(.*)$") then
 local hash = 'bot:monsh:'..msg.chat_id_
-local ap = {string.match(text, "^(سان تنزيل منشئ) @(.*)$")}
+local ap = {string.match(text, "^(تنزيل منشئ) @(.*)$")}
 function remmonsh_by_username(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.id_)
 local faeder_res = user_info_
@@ -4706,9 +4811,9 @@ end
 end
 ----------------------------------------------faeder-------------------------------------------------
 if is_admin(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^سان تنزيل منشئ (%d+)$") then
+if text:match("^تنزيل منشئ (%d+)$") then
 local hash = 'bot:monsh:'..msg.chat_id_
-local ap = {string.match(text, "^(سان تنزيل منشئ) (%d+)$")}
+local ap = {string.match(text, "^(تنزيل منشئ) (%d+)$")}
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. ap[2])
 local faeder_res = user_info_
 if user_info_ then
@@ -5195,7 +5300,7 @@ end
 end
 ----------------------------------------------faeder-------------------------------------------------
 if is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ ~= 0 then
-local text = msg.content_.text_:gsub('سان رفع مدير','setowner')
+local text = msg.content_.text_:gsub('رفع مدير','setowner')
 if text:match("^[Ss]etowner$") then
 function owner_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
@@ -5257,7 +5362,7 @@ else
 faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..ap[2]..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ * تم رفعه « مدير » بنجاح *', 1, 'md')
 end end end
 ----------------------------------------faeder-------------------------------------------------------
-local text = msg.content_.text_:gsub('سان تنزيل مدير','Demowner')
+local text = msg.content_.text_:gsub('تنزيل مدير','Demowner')
 if text:match("^[Dd]emowner$") then
 function deowner_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
@@ -5452,7 +5557,7 @@ end
 end
 -----------
 if is_momod(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ ~= 0 then  
-if text:match("^سان تقييد$") then  
+if text:match("^تقييد$") then  
 function mute_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
@@ -5474,7 +5579,7 @@ getMessage(msg.chat_id_, msg.reply_to_message_id_,mute_by_reply)
 end
 ----------faeder 
 if msg.reply_to_message_id_ ~= 0 then  
-if text:match("^سان الغاء تقييد$") then
+if text:match("^الغاء تقييد$") then
 function mute_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
@@ -5493,7 +5598,7 @@ end
 end 
 end
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^سان المقيدين$") then 
+if text:match("^المقيدين$") then 
 local hash =  'tkeed:'..msg.chat_id_
 local list = faederdx1:smembers(FAEDER..hash)
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -5520,7 +5625,7 @@ end
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 end
-if text == 'سان مسح المقيدين' and is_momod(msg.sender_user_id_, msg.chat_id_) then     
+if text == 'مسح المقيدين' and is_momod(msg.sender_user_id_, msg.chat_id_) then     
 local hash =  'tkeed:'..msg.chat_id_
 local list = faederdx1:smembers(FAEDER..hash)
 for k,v in pairs(list) do   
@@ -5531,7 +5636,7 @@ faederdx(msg.chat_id_, msg.id_, 1,'🚦⁞ تم مسح المقيدين •', 1,
  end
 -------------------------------------------faeder----------------------------------------------------
 if is_momod(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ ~= 0 then
-if text:match("^سان تثبيت$") then  
+if text:match("^تثبيت$") then  
 local id = msg.id_
 local msgs = {[0] = id}
 pin(msg.chat_id_,msg.reply_to_message_id_,1)
@@ -5541,7 +5646,7 @@ end
 end
 --------------------------------------faeder---------------------------------------------------------
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^[Mm]odlist$") or text:match("^سان الادمنيه$") then
+if text:match("^[Mm]odlist$") or text:match("^الادمنيه$") then
 local hash =  'bot:momod:'..msg.chat_id_
 local list = faederdx1:smembers(FAEDER..hash)
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -5594,7 +5699,7 @@ end
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 --------------------------------faeder-------------------------------------------
-if text:match("^[Vv]iplist$") or text:match("^سان الاعضاء المميزين$") then
+if text:match("^[Vv]iplist$") or text:match("^الاعضاء المميزين$") then
 local hash =  'bot:vipmem:'..msg.chat_id_
 local list = faederdx1:smembers(FAEDER..hash)
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -5627,7 +5732,7 @@ local list = faederdx1:smembers(FAEDER..hash)
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 text = "🚦⁞ List of donky 🔽 : \n\n"
 else
-text = "🚦⁞ قائمه المطاية القروب😹😔 🔽 : \n\n"
+text = "🚦⁞ قائمه المطاية الكروب😹😔 🔽 : \n\n"
 end
 for k,v in pairs(list) do
 local user_info = faederdx1:hgetall('user:'..v)
@@ -5642,7 +5747,7 @@ if #list == 0 then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 text = "🚦⁞ List of donky is empty ☑️"
 else
-text = "🚦⁞ عجيب 😳😹 هذا القروب كله اوادم ما بي مطايه 😹😔"
+text = "🚦⁞ عجيب 😳😹 هذا الكروب كله اوادم ما بي مطايه 😹😔"
 end
 end
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
@@ -5675,7 +5780,7 @@ end
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 ------------------------------------------faeder-----------------------------------------------------
-if text:match("^[Mm]utelist$") or text:match("^سان المكتومين$") then
+if text:match("^[Mm]utelist$") or text:match("^المكتومين$") then
 local hash =  'bot:muted:'..msg.chat_id_
 local list = faederdx1:smembers(FAEDER..hash)
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -5702,7 +5807,7 @@ end
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 ----------------------------------faeder-------------------------------------------------------------
-if text:match("^[Oo]wner$") or text:match("^[Oo]wnerlist$") or text:match("^سان المدير$") or text:match("^سان المدراء$") then
+if text:match("^[Oo]wner$") or text:match("^[Oo]wnerlist$") or text:match("^المدير$") or text:match("^المدراء$") then
 local hash =  'bot:owners:'..msg.chat_id_
 local list = faederdx1:smembers(FAEDER..hash)
 if not faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -5756,7 +5861,7 @@ end
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 ----------------------------------------faeder--------------
-if text:match("^[mM]onsh$") or text:match("^[Mm]onshlist$") or text:match("^سان المنشئ$") or text:match("^سان المنشئين$") then
+if text:match("^[mM]onsh$") or text:match("^[Mm]onshlist$") or text:match("^المنشئ$") or text:match("^المنشئين$") then
 local hash =  'bot:monsh:'..msg.chat_id_
 local list = faederdx1:smembers(FAEDER..hash)
 if not faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -5783,7 +5888,7 @@ end
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 ----------------------------------------faeder-------------------------------------------------------
-if text:match("^[Bb]anlist$") or text:match("^سان المحظورين$") then
+if text:match("^[Bb]anlist$") or text:match("^المحظورين$") then
 local hash =  'bot:banned:'..msg.chat_id_
 local list = faederdx1:smembers(FAEDER..hash)
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -5815,7 +5920,7 @@ if is_sudo(msg) and (text:match("^[Ss]etsupport$") or text:match("^ضع دعم$"
 if faederdx1:get(FAEDER.."lang:gp:" .. msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞  Please Send your *Support link* Or *Support Bot ID* now •", 1, "md")
 else
-faederdx(msg.chat_id_, msg.id_, 1, "️🚦⁞ ارسل لي رابط قروب الدعم •\n🚏⁞  او قم بارسال المعرف الذي تود ان يتواصل معك متابعيك من خلاله •", 1, "md")
+faederdx(msg.chat_id_, msg.id_, 1, "️🚦⁞ ارسل لي رابط كروب الدعم •\n🚏⁞  او قم بارسال المعرف الذي تود ان يتواصل معك متابعيك من خلاله •", 1, "md")
 end
 faederdx1:setex(FAEDER.."bot:support:link" .. msg.sender_user_id_, 120, true)
 end
@@ -5879,7 +5984,7 @@ end
 faederdx(msg.chat_id_, msg.id_, 1, text, "md")
 end end
 ------------------------------------faeder-----------------------------------------------------------
-if text:match("^[Gg]etid$") or text:match("^سان ايدي$") and msg.reply_to_message_id_ ~= 0 then
+if text:match("^[Gg]etid$") or text:match("^ايدي$") and msg.reply_to_message_id_ ~= 0 then
 function id_by_reply(extra, result, success)
 if faederdx1:get('lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ user id •  "..result.sender_user_id_, 1, 'md')
@@ -5889,8 +5994,8 @@ end
 end
 getMessage(msg.chat_id_,msg.reply_to_message_id_,id_by_reply)
 end
-if text:match("^سان رتبته @(.*)$") then
-local ap = {string.match(text, "^(سان رتبته) @(.*)$")}
+if text:match("^رتبته @(.*)$") then
+local ap = {string.match(text, "^(رتبته) @(.*)$")}
 function id_by_username(extra, result, success)
 if result.id_ then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -5928,7 +6033,7 @@ t = 'مطور ثانوي'
 elseif is_admin(result.id_) then
 t = 'مطور فالرتبه الثالثه'
 elseif is_monsh(result.id_, msg.chat_id_) then
-t = 'منشئ القروب'
+t = 'منشئ الكروب'
 elseif is_onall(result.id_) then
 t = 'مدير عام'
 elseif is_moall(result.id_) then
@@ -5958,7 +6063,7 @@ else
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 text = '🚦• this channel or group •\n🎖• is not have rank •'
 else
-text = '🚦• هذه قناة او قروب •\n🎖• ليس له رتبه •'
+text = '🚦• هذه قناة او كروب •\n🎖• ليس له رتبه •'
 end
 end
 end
@@ -6014,7 +6119,7 @@ t = 'مطور ثانوي'
 elseif is_admin(result.id_) then
 t = 'مطور فالرتبه الثالثه'
 elseif is_monsh(result.id_, msg.chat_id_) then
-t = 'منشئ القروب'
+t = 'منشئ الكروب'
 elseif is_onall(result.id_) then
 t = 'مدير عام'
 elseif is_moall(result.id_) then
@@ -6098,7 +6203,7 @@ t = 'مطور ثانوي'
 elseif is_admin(result.id_) then
 t = 'مطور فالرتبه الثالثه 🚩'
 elseif is_monsh(result.id_, msg.chat_id_) then
-t = 'منشئ القروب'
+t = 'منشئ الكروب'
 elseif is_onall(result.id_) then
 t = 'مدير عام'
 elseif is_moall(result.id_) then
@@ -6311,7 +6416,7 @@ end
 if msg.reply_to_message_id_ ~= 0 then
 return ""
 else
-if (text:match("^سان ايدي$") or text:match("^[Ii]Dd$")) and faeder11(msg) then
+if (text:match("^ايدي$") or text:match("^[Ii]Dd$")) and faeder11(msg) then
 function faeder(extra,result,success)
 if result.username_ then username = '@'..result.username_ else username = ' لا يوجد 🎍 ' end
 local function getpro(extra, result, success) 
@@ -6664,7 +6769,7 @@ getUser(msg.sender_user_id_, faeder)
 end
 end
 ------------------------------------------faeder----------------------------------------------------
-if text == "سان صورتي" and not faederdx1:get(FAEDER.."lock:get:photo"..msg.chat_id_)  then 
+if text == "صورتي" and not faederdx1:get(FAEDER.."lock:get:photo"..msg.chat_id_)  then 
 local function getpro(extra, result, success)
 if result.photos_[0] then
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,"🚦⁞ لديك "..result.total_count_.." صوره‌‏ •", msg.id_, msg.id_, "md")
@@ -6821,7 +6926,7 @@ elseif is_momod(msg.sender_user_id_, msg.chat_id_) then
 tar = 'الادمن ✨'          
 end
 local lockptf = {string.match(text, "^(قفل) (.*)$")}
-if lockpt[2] == "edit" or lockptf[2] == "سان التعديل" then
+if lockpt[2] == "edit" or lockptf[2] == "التعديل" then
 if not faederdx1:get(FAEDER..'editmsg'..msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then                  
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ Has been lock edit ☑️', 1, 'md')
@@ -6838,7 +6943,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم قفل التعديل سابق�
 end
 end
 end     
-if lockpt[2] == "cmd" or lockptf[2] == "سان الشارحه" then
+if lockpt[2] == "cmd" or lockptf[2] == "الشارحه" then
 if not faederdx1:get(FAEDER..'bot:cmds'..msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🎖⁞ Has been lock cmd ☑️', 1, 'md')
@@ -6855,7 +6960,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم قفل الشارحه سابق�
 end
 end
 end
-if lockpt[2] == "bots" or lockptf[2] == "سان البوتات" then
+if lockpt[2] == "bots" or lockptf[2] == "البوتات" then
 if not faederdx1:get(FAEDER..'bot:bots:mute'..msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then 
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ Has been lock bots ☑️', 1, 'md')
@@ -6872,7 +6977,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم قفل البوتات سابق�
 end
 end
 end
-if lockpt[2] == "bots ban" or lockptf[2] == "سان البوتات بالطرد" then
+if lockpt[2] == "bots ban" or lockptf[2] == "البوتات بالطرد" then
 if not faederdx1:get(FAEDER..'bot:bots:ban'..msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ Has been lock bots ban ☑️', 1, 'md')
@@ -6889,7 +6994,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم قفل البوتات بالط�
 end
 end
 end
-if lockpt[2] == "bots keed" or lockptf[2] == "سان البوتات بالتقييد" then
+if lockpt[2] == "bots keed" or lockptf[2] == "البوتات بالتقييد" then
 if not faederdx1:get(FAEDER..'keed_bots'..msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ Has been lock bots keed ☑️', 1, 'md')
@@ -6906,7 +7011,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم قفل البوتات بالت�
 end
 end
 end
-if lockpt[2] == "flood" or lockptf[2] == "سان التكرار" then
+if lockpt[2] == "flood" or lockptf[2] == "التكرار" then
 if not faederdx1:get(FAEDER..'anti-flood:'..msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ Has been lock flood ☑️', 1, 'md')
@@ -6923,7 +7028,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم قفل التكرار سابق�
 end
 end
 end
-if lockpt[2] == "pin" or lockptf[2] == "سان التثبيت" then
+if lockpt[2] == "pin" or lockptf[2] == "التثبيت" then
 if not faederdx1:get(FAEDER..'bot:pin:mute'..msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ Has been lock pin ☑️', 1, 'md')
@@ -7150,7 +7255,7 @@ if link:match("https://") then
 if faederdx1:get(FAEDER.."lang:gp:" .. msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ <b>Support Link</b> :\n\n " .. link, 1, "html")
 else
-faederdx(msg.chat_id_, msg.id_, 1, "☑️⁞ تم ارسال معلوماتك الى المطور •\n🌿⁞ سوف ياتي المطور هنا باقرب وقت •\n🚠⁞ يمكن الدخل لقروب المطور وطلب المساعده •\n🚦⁞ رابط قروب دعم البوت •\n\n " .. link, 1, "html")
+faederdx(msg.chat_id_, msg.id_, 1, "☑️⁞ تم ارسال معلوماتك الى المطور •\n🌿⁞ سوف ياتي المطور هنا باقرب وقت •\n🚠⁞ يمكن الدخل لكروب المطور وطلب المساعده •\n🚦⁞ رابط كروب دعم البوت •\n\n " .. link, 1, "html")
 end
 elseif faederdx1:get(FAEDER.."lang:gp:" .. msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ <b>Support Bot ID</b> : @" .. link, 1, "html")
@@ -7166,7 +7271,7 @@ end
 
 ----------------------------------------faeder-------------------------------------------------------
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^[Ww]elcome on$") or text:match("^سان تفعيل الترحيب$") then
+if text:match("^[Ww]elcome on$") or text:match("^تفعيل الترحيب$") then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, ' 🚦⁞  Welcome activated • ', 1, 'md')
 else
@@ -7199,7 +7304,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم حذف الترحيب •', 1, 
 end
 faederdx1:del(FAEDER..'welcome:'..msg.chat_id_)
 end
-if text:match("^[Gg]et welcome$") or text:match("^سان جلب الترحيب$") then
+if text:match("^[Gg]et welcome$") or text:match("^جلب الترحيب$") then
 local wel = faederdx1:get(FAEDER..'welcome:'..msg.chat_id_)
 if wel then
 faederdx(msg.chat_id_, msg.id_, 1, wel, 1, 'md')
@@ -7342,7 +7447,7 @@ end
 ---------------------------------------------faeder--------------------------------------------------
 
 ------------------------------------faeder-----------------------------------------------------------
-if text:match("^[Ss]tats$") or text:match("^سان الاحصائيه$") and is_admin(msg.sender_user_id_, msg.chat_id_) then
+if text:match("^[Ss]tats$") or text:match("^الاحصائيات$") and is_admin(msg.sender_user_id_, msg.chat_id_) then
 local gps = faederdx1:scard(FAEDER.."bot:groups")
 local users = faederdx1:scard(FAEDER.."bot:userss")
 local allmgs = faederdx1:get(FAEDER.."bot:allmsgs")
@@ -7369,15 +7474,15 @@ end
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ Status 🗂 \n\n🎖⁞ Groups • '..gps..'\n\n👥⁞ Users • '..users..' \n\n📬⁞ Msg received • '..allmgs..'\n\n🎙⁞ Auto Leave • '..autoleavear..'\n\n💢⁞ Clerk • '..clerkar, 1, 'md')
 else
-faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ احصائيات البوت 🗂 \n\n🎖⁞ عدد القروبات • '..gps..'\n\n👥⁞ عدد الاعضاء • '..users..' \n\n📬⁞ عدد كل رسائل المجموعات • '..allmgs..'\n\n🚧⁞ المغادره التلقائيه • '..autoleavear..'\n\n💢⁞ رد الخاص • '..clerkar, 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ احصائيات البوت 🗂 \n\n🎖⁞ عدد الكروبات • '..gps..'\n\n👥⁞ عدد الاعضاء • '..users..' \n\n📬⁞ عدد كل رسائل المجموعات • '..allmgs..'\n\n🚧⁞ المغادره التلقائيه • '..autoleavear..'\n\n💢⁞ رد الخاص • '..clerkar, 1, 'md')
 end
 end
 ---------------------------------------faeder---------------------------------------
-if text:match("^[Rr]esgp$") or text:match("^تنظيف القروبات$") and is_admin(msg.sender_user_id_, msg.chat_id_) then
+if text:match("^[Rr]esgp$") or text:match("^تنظيف الكروبات$") and is_admin(msg.sender_user_id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ Nubmper of groups bot has been update •', 1, 'md')
 else
-faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم تنظيف القروبات الوهميه •', 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم تنظيف الكروبات الوهميه •', 'md')
 end
 faederdx1:del(FAEDER.."bot:groups")
 end
@@ -7392,7 +7497,7 @@ faederdx1:del(FAEDER.."bot:allmsgs")
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ All msg received has been reset •', 1, 'md')
 else
-faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم تنظيف عدد رسائل القروبات •', 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم تنظيف عدد رسائل الكروبات •', 'md')
 end
 end
 --------------------------------------------faeder---------------------------------------------------
@@ -7569,11 +7674,11 @@ faederdx1:setex(FAEDER..'bot:muteall'..msg.chat_id_, num, true)
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ Lock all has been enable for "..mutept[1].." hours •", 'md')
 else
-faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ تم قفل الكل لمده "..mutept[1].." ساعة ⏱ من الأن وستفتح بشكل تلقائي بعد مضي الوقت المحدد  •", 'md')
+faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ تم قفل الكل لمده "..mutept[1].." ساعه •", 'md')
 end
 end
-if text:match("^قفل المجموعة لمدة (%d+)$") then
-local mutept = {string.match(text, "^قفل المجموعة لمدة  (%d+)$")}
+if text:match("^قفل الكل بالساعات (%d+)$") then
+local mutept = {string.match(text, "^قفل الكل بالساعات (%d+)$")}
 local hour = string.gsub(mutept[1], 'h', '')
 local num1 = tonumber(hour) * 3600
 local num = tonumber(num1)
@@ -7581,7 +7686,7 @@ faederdx1:setex(FAEDER..'bot:muteall'..msg.chat_id_, num, true)
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, "🎖⁞ Lock all has been enable for "..mutept[1].." hours •", 'md')
 else
-faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ تم قفل المجموعة لمده "..mutept[1].." ساعة ⏱ من الأن وستفتح بشكل تلقائي بعد مضي الوقت المحدد •", 'md')
+faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ تم قفل الكل لمده "..mutept[1].." ساعه •", 'md')
 end
 end
 end
@@ -8729,7 +8834,7 @@ faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 48, string.len(ms
 end
 end
 end
-if txts[2] == 'سان البوتات' then
+if txts[2] == 'البوتات' then
 local botslist = function(extra, result)
 local list = result.members_
 for i = 0, #list do
@@ -8849,7 +8954,7 @@ end
 end
 end
 
-if text:match("^سان مسح القوائم$") then
+if text:match("^مسح القوائم$") then
 if not is_monsh(msg.sender_user_id_, msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ هذه الخاصيه للمنشئ والرتب الاعلى منه •', 1, 'md')
 else
@@ -8864,7 +8969,7 @@ end
 end
 ------------------------------faeder-----------------------------------------------------------------   
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^[Ss]ettings$") or text:match("^سان الاعدادات$") then
+if text:match("^[Ss]ettings$") or text:match("^الاعدادات$") then
 if faederdx1:get(FAEDER..'bot:muteall'..msg.chat_id_) then
 mute_all = 'مفعل 🚩'
 else
@@ -9059,7 +9164,7 @@ else
 send_welcome = 'معطل 📍'
 end
 ------------faeder
-local TXTAR = "🎖⁞ سان اعدادات المجموعه 🔻 :\n\n"
+local TXTAR = "🎖⁞ اعدادات المجموعه 🔻 :\n\n"
 .."🚦⁞ قفل الحمايه • "..strict.."\n"
 .."🚦⁞ قفل الكل • "..mute_all.."\n"
 .."🚦⁞ قفل الشارحه • "..mute_cmd.."\n\n"
@@ -9139,8 +9244,8 @@ end
 end
 end
 ---------------------------------------faeder--------------------------------------------------------
-if text:match("^سان قول (.*)$")  then
-local txt = {string.match(text, "^(سان قول) (.*)$")}
+if text:match("^كول (.*)$")  then
+local txt = {string.match(text, "^(كول) (.*)$")}
 faederdx(msg.chat_id_,0, 1, txt[2], 1, 'md')
 local id = msg.id_
 local msgs = {[0] = id}
@@ -9148,7 +9253,7 @@ local chat = msg.chat_id_
 delete_msg(chat,msgs)
 end
 -----------------
-if (text and text == 'enable reply bot') and is_owner(msg.sender_user_id_, msg.chat_id_) or (text and text == 'Enable Reply Bot') and is_owner(msg.sender_user_id_, msg.chat_id_) or (text and text == 'سان تفعيل ردود البوت') and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if (text and text == 'enable reply bot') and is_owner(msg.sender_user_id_, msg.chat_id_) or (text and text == 'Enable Reply Bot') and is_owner(msg.sender_user_id_, msg.chat_id_) or (text and text == 'تفعيل ردود البوت') and is_owner(msg.sender_user_id_, msg.chat_id_) then
 if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 if faederdx1:get(FAEDER..'bot:lang:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '📚⁞ *Reply bot is already enabled*️ •', 1, 'md')
@@ -9164,7 +9269,7 @@ faederdx1:del(FAEDER..'bot:rep:mute'..msg.chat_id_)
 end
 end
 end
-if (text and text == 'disable reply bot') and is_owner(msg.sender_user_id_, msg.chat_id_) or (text and text == 'Disable Reply Bot') and is_owner(msg.sender_user_id_, msg.chat_id_) or (text and text == 'سان تعطيل ردود البوت') and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if (text and text == 'disable reply bot') and is_owner(msg.sender_user_id_, msg.chat_id_) or (text and text == 'Disable Reply Bot') and is_owner(msg.sender_user_id_, msg.chat_id_) or (text and text == 'تعطيل ردود البوت') and is_owner(msg.sender_user_id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then
 if faederdx1:get(FAEDER..'bot:lang:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '📚⁞ *Reply bot is already disabled*️ •', 1, 'md')
@@ -9202,7 +9307,7 @@ end
 end
 end
 -------------------------------------------faeder----------------------------------------------------
-if text:match("^سان ضع ملاحظه (.*)$") and is_leader(msg) then
+if text:match("^ضع ملاحظه (.*)$") and is_leader(msg) then
 local txt = {string.match(text, "^(ضع ملاحظه) (.*)$")}
 faederdx1:set(FAEDER..'owner:note1', txt[2])
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -9212,7 +9317,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '🎖⁞ تم حفظ الملاحظه ارس�
 end
 end
 ---------------------------------------faeder--------------------------------------------------------
-if text:match("^سان جلب الملاحظه$") and is_leader(msg) then
+if text:match("^جلب الملاحظه$") and is_leader(msg) then
 local note = faederdx1:get(FAEDER..'owner:note1')
 faederdx(msg.chat_id_, msg.id_, 1, note, 1, nil)
 end
@@ -9223,7 +9328,7 @@ faederdx(msg.chat_id_, msg.id_, 1, rules, 1, nil)
 end
 -----------------------------------------------------------------------------------------------
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
-if text:match("^سان الروابط$") then
+if text:match("^الروابط$") then
 if faederdx1:get(FAEDER..'bot:links:mute'..msg.chat_id_) then
 mute_links = 'مقفوله 🚩'
 else
@@ -9235,7 +9340,7 @@ faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md')
 end
 end
 ---------------------------------------------faeder--------------------------------------------------
-if text:match("^سان ضع اسم (.*)$") and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if text:match("^ضع اسم (.*)$") and is_owner(msg.sender_user_id_, msg.chat_id_) then
 local txt = {string.match(text, "^(ضع اسم) (.*)$")}
 changetitle(msg.chat_id_, txt[2])
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -9245,7 +9350,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '🎖⁞ تم تغيير اسم المجمو�
 end
 end
 --------------------------------------------faeder---------------------------------------------------
-if text:match("^سان ضع صوره$") and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if text:match("^ضع صوره$") and is_owner(msg.sender_user_id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ Plese send group photo •', 1, 'md')
 else
@@ -9254,7 +9359,7 @@ end
 faederdx1:set(FAEDER..'bot:setphoto'..msg.chat_id_..':'..msg.sender_user_id_,true)
 end
 -----------------------------------------------------------------------------------------------
-if text:match('^gplist$') or text:match('^سان المجموعات$') then
+if text:match('^gplist$') or text:match('^المجموعات$') then
 local list = faederdx1:smembers(FAEDER.."bot:groups")
 local t = '🚦⁞ مجموعات البوت •\n\n'
 for k,v in pairs(list) do
@@ -9266,12 +9371,12 @@ end
 faederdx(msg.chat_id_, msg.id_, 1,t, 1, 'md')
 end
 ----------------------------by faede-------------------------------------------------------------------
-if text:match("^سان الغاء تثبيت$") and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if text:match("^الغاء تثبيت$") and is_owner(msg.sender_user_id_, msg.chat_id_) then
 unpinmsg(msg.chat_id_)
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم الغاء تثبيت الرساله •', 1, 'md')
 end
 ------------------------------by faeder-----------------------------------------------------------------
-if text:match("^سان اعاده تثبيت$") and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if text:match("^اعاده تثبيت$") and is_owner(msg.sender_user_id_, msg.chat_id_) then
 local pin_id = faederdx1:get(FAEDER..'pinnedmsg'..msg.chat_id_)
 if pin_id then
 pin(msg.chat_id_,pin_id,0)
@@ -9280,7 +9385,7 @@ else
 end
 end       
 -----------------------------------------------------------------------------------------------
-if text:match("^kick delete$") or text:match("^سان طرد الحسابات المحذوفه$") then
+if text:match("^kick delete$") or text:match("^طرد الحسابات المحذوفه$") then
 local function deleteaccounts(extra, result)
 for k,v in pairs(result.members_) do 
 local function cleanaccounts(extra, result)
@@ -9295,7 +9400,7 @@ end
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,offset_ = 0,limit_ = 1096500}, deleteaccounts, nil)
 end
 --------------------------------------------------------------------------------clean kicked
-if text:match("^clean kicked$") or text:match("^سان تنظيف قائمه الحظر$") then
+if text:match("^clean kicked$") or text:match("^تنظيف قائمه الحظر$") then
 local function removeblocklist(extra, result)
 if tonumber(result.total_count_) == 0 then 
 faederdx(msg.chat_id_, msg.id_, 0,'🚦⁞ لا يوجد محظورين •', 1, 'md')
@@ -9305,13 +9410,13 @@ for x,y in pairs(result.members_) do
 x = x + 1
 changeChatMemberStatus(msg.chat_id_, y.user_id_, 'Left', dl_cb, nil)
 end
-faederdx(msg.chat_id_, msg.id_, 0,'🚦⁞ تم تنظيف قائمه حظر القروب •', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 0,'🚦⁞ تم تنظيف قائمه حظر الكروب •', 1, 'md')
 end
 end
 getChannelMembers(msg.chat_id_, 0, 'Kicked', 200, removeblocklist, {chat_id_ = msg.chat_id_, msg_id_ = msg.id_}) 
 end
 -----------------------------------------------------------------------------------------------
-if text:match("^(gpinfo)$") or text:match("^سان معلومات المجموعه$") then
+if text:match("^(gpinfo)$") or text:match("^معلومات المجموعه$") then
 function gpinfo(arg,data)
 -- vardump(data) 
 faederdx(msg.chat_id_, msg.id_, 1, '💳⁞ ايديها  • '..msg.chat_id_..'\n💷⁞ عدد الادمنيه • *'..data.administrator_count_..'*\n🚷⁞ عدد المحظورين • *'..data.kicked_count_..'*\n📱⁞ عدد الاعضاء • *'..data.member_count_..'*\n', 1, 'md') 
@@ -9319,27 +9424,27 @@ end
 getChannelFull(msg.chat_id_, gpinfo, nil) 
 end
 --------------------------------faeder--------------------------------------------------------------
-if text == 'سان تفعيل البوت الخدمي' then 
+if text == 'تفعيل البوت الخدمي' then 
 local  faeder = '🚦⁞ تم تفعيل البوت الخدمي •'
 faederdx( msg.chat_id_, msg.id_, 1, faeder, 1, "md") 
 faederdx1:del(FAEDER..'lock:bot:free'..bot_id) 
 end 
-if text == 'سان تعطيل البوت الخدمي' then 
+if text == 'تعطيل البوت الخدمي' then 
 faeder = '🚦⁞ تم تعطيل البوت الخدمي •'
 faederdx( msg.chat_id_, msg.id_, 1, faeder, 1, "md") 
 faederdx1:set(FAEDER..'lock:bot:free'..bot_id,true) 
 end
-if text == 'سان تفعيل اللعبه' then   
+if text == 'تفعيل اللعبه' then   
 faeder = '*🚏 ⁞ تم تفعيل اللعبه ✅*'  
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md')
 faederdx1:set(FAEDER..'bot:lock_geam'..msg.chat_id_,true)  
 end
-if text == 'سان تعطيل اللعبه' then  
+if text == 'تعطيل اللعبه' then  
 faeder = '*🚏 ⁞ تم تعطيل اللعبه ✅*'  
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md')
 faederdx1:del(FAEDER..'bot:lock_geam'..msg.chat_id_) 
 end
-if text == 'سان تفعيل جلب الصوره' and is_owner(msg.sender_user_id_, msg.chat_id_) then   
+if text == 'تفعيل جلب الصوره' and is_owner(msg.sender_user_id_, msg.chat_id_) then   
 if faederdx1:get(FAEDER..'lock:get:photo'..msg.chat_id_) then
 faeder = '*🚏 ⁞ تم تفعيل جلب الصوره الشخصيه ✅*' 
 faederdx( msg.chat_id_, msg.id_, 1, faeder, 1, "md") 
@@ -9349,7 +9454,7 @@ faeder = '*🚏 ⁞ جلب الصوره الشخصيه مفعل مسبقا ✅*'
 faederdx( msg.chat_id_, msg.id_, 1, faeder, 1, "md") 
 end
 end
-if text == 'سان تعطيل جلب الصوره' and is_owner(msg.sender_user_id_, msg.chat_id_) then   
+if text == 'تعطيل جلب الصوره' and is_owner(msg.sender_user_id_, msg.chat_id_) then   
 if not faederdx1:get(FAEDER..'lock:get:photo'..msg.chat_id_) then
 faeder = '*🚏 ⁞ تم تعطيل جلب الصوره الشخصيه ✅*'  
 faederdx( msg.chat_id_, msg.id_, 1, faeder, 1, "md") 
@@ -9359,9 +9464,9 @@ faeder = '*🚏 ⁞ جلب الصوره الشخصيه معطل مسبقا ✅*'
 faederdx( msg.chat_id_, msg.id_, 1, faeder, 1, "md") 
 end
 end
-if text:match('^مساند تفعيل$') then
+if text:match('^تفعيل$') then
 function adding(extra,result,success)
-local txt = {string.match(text, "^(مساند تفعيل)$")}
+local txt = {string.match(text, "^(تفعيل)$")}
 local function promote_admin(extra, result, success)
 local admins = result.members_
 for i=0 , #admins do
@@ -9417,8 +9522,8 @@ end
 getUser(msg.sender_user_id_,adding)
 end
 ------
-if text:match('^مساند تعطيل$') and is_admin(msg.sender_user_id_, msg.chat_id_) then
-local txt = {string.match(text, "^(مساند تعطيل)$")}
+if text:match('^تعطيل$') and is_admin(msg.sender_user_id_, msg.chat_id_) then
+local txt = {string.match(text, "^(تعطيل)$")}
 if not faederdx1:get(FAEDER.."bot:enable:"..msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🎖⁞ Group Actually Rem •', 1, 'md')
@@ -9442,7 +9547,7 @@ local gp = {string.match(text, "^([Rr]em)(-%d+)$")}
 faederdx1:del(FAEDER.."bot:charge:"..gp[2])
 local v = tonumber(bot_owner)       
 end
-if text:match("^سان تفعيل كل القروبات$") then
+if text:match("^تفعيل كل الكروبات$") then
 local gps = faederdx1:smembers(FAEDER.."bot:groups") or 0
 local gps2 = faederdx1:smembers("faeder:addg"..bot_id) or 0
 for i=1,#gps do
@@ -9452,7 +9557,7 @@ faederdx1:set( FAEDER.."bot:charge:"..gps[i],true)
 end
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم تفعيل المجموعات *{'..(#gps - #gps2)..'}*', 1, 'md')
 end   
-if text:match("^سان تعطيل كل القروبات$") then
+if text:match("^تعطيل كل الكروبات$") then
 local gps = faederdx1:smembers(FAEDER.."bot:groups") or 0
 local gps2 = faederdx1:smembers("faeder:addg"..bot_id) or 0
 for i=1,#gps do
@@ -9487,7 +9592,7 @@ end
 getUser(msg.sender_user_id_,adding)
 end
 ------------------------------------faeder----------------------------------------------------------
-if text and text:match("^سان نشر بالخاص (.*)") and is_leader(msg) then
+if text and text:match("^نشر بالخاص (.*)") and is_leader(msg) then
 if not faederdx1:get(FAEDER..'lock:add'..msg.chat_id_) then
 local pm =  text:match("^نشر بالخاص (.*)")
 local s2a = "🚦⁞ تم ارسال رسالتك الى •\n🗳⁞ (* GP *) شخص في خاص البوت •\n‏"
@@ -9502,7 +9607,7 @@ end
 end
 -------------faeder     
 text = msg.content_.text_
-if msg.content_.text_ == 'سان مسح رد' and  is_owner(msg.sender_user_id_, msg.chat_id_) then
+if msg.content_.text_ == 'مسح رد' and  is_owner(msg.sender_user_id_, msg.chat_id_) then
 faederdx1:set(FAEDER..'add:repgp'..msg.sender_user_id_..''..msg.chat_id_..'','del_repgp1')
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ حسننا ارسل الكلمه التريد مسحها 📬" ,  1, "md")
 return false
@@ -9522,7 +9627,7 @@ return false
 end
 end
 --------------------------------------------------------------------------
-if msg.content_.text_ == 'سان اضف رد' and is_owner(msg.sender_user_id_, msg.chat_id_)  then
+if msg.content_.text_ == 'اضف رد' and is_owner(msg.sender_user_id_, msg.chat_id_)  then
 faederdx1:set(FAEDER..'add:repgp'..msg.sender_user_id_..''..msg.chat_id_..'','set_repgp')
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ حسننا ارسل لي الكلمه الان 📬" ,  1, "md")
 return false    end
@@ -9537,7 +9642,7 @@ return false
 end
 end
  text = msg.content_.text_
-if msg.content_.text_ == 'سان مسح رد للكل' then
+if msg.content_.text_ == 'مسح رد للكل' then
 faederdx1:set(FAEDER.."add:repallt"..msg.sender_user_id_,'del_rep1')
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ حسننا ارسل الكلمه التريد مسحها 📬" ,  1, "md")
 return false
@@ -9557,7 +9662,7 @@ return false
 end
 end
 --------------------------------------------------------------------------
-if msg.content_.text_ == 'سان اضف رد للكل' then
+if msg.content_.text_ == 'اضف رد للكل' then
 faederdx1:set(FAEDER.."add:repallt"..msg.sender_user_id_,'set_rep')
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ حسننا ارسل لي الكلمه الان 📬" ,  1, "md")
 return false    end
@@ -9571,7 +9676,7 @@ faederdx1:sadd(FAEDER.."rep_sudo",msg.content_.text_)
 return false 
 end    end
 -------------------------------------------------------------------------
-if  msg.content_.text_ == 'سان الردود' and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if  msg.content_.text_ == 'الردود' and is_owner(msg.sender_user_id_, msg.chat_id_) then
 local redod = faederdx1:smembers(FAEDER..'rep_owner'..msg.chat_id_..'')
 if #redod == 0 then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ لا توجد ردود مضافه 🏷" ,  1, "md")
@@ -9585,7 +9690,7 @@ end
 return false
 end
 -------------------------------------------------------------------------------
-if msg.content_.text_ == 'سان مسح الردود' and is_owner(msg.sender_user_id_, msg.chat_id_) then
+if msg.content_.text_ == 'مسح الردود' and is_owner(msg.sender_user_id_, msg.chat_id_) then
 local redod = faederdx1:smembers(FAEDER..'rep_owner'..msg.chat_id_..'')
 if #redod == 0 then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ لا توجد ردود مضافه 🏷" ,  1, "md")
@@ -9604,7 +9709,7 @@ return false
 end
 end
 ----------------------------------------------------------------------------
-if  msg.content_.text_ == "سان ردود المطور" and is_sudo(msg) then
+if  msg.content_.text_ == "ردود المطور" and is_sudo(msg) then
 local redod = faederdx1:smembers(FAEDER.."rep_sudo")
 if #redod == 0 then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ لا توجد ردود مضافه 🏷" ,  1, "md")
@@ -9619,7 +9724,7 @@ end
 return false
 end
 -------------------------------------------------------------------------------
-if msg.content_.text_ == "سان مسح ردود المطور" and is_sudo(msg) then
+if msg.content_.text_ == "مسح ردود المطور" and is_sudo(msg) then
 local redod = faederdx1:smembers(FAEDER.."rep_sudo")
 if #redod == 0 then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ لا توجد ردود مضافه 🏷" ,  1, "md")
@@ -9731,21 +9836,27 @@ faederdx1:set(FAEDER..'bot:help', text)
 faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
-if text:match("^سان الاوامر$") then
+if text:match("^الاوامر$") then
 local help = faederdx1:get(FAEDER..'bot:help')
 local text =  [[
 🚦*⁞* اوامر البــوت 
 ┓ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┏
+
   🎙*⁞* م¹ *⁞* ٱوٱمـر الحمايه ✓
+
   🎙*⁞* م² *⁞* ٱوٱمـر الادمنيه والمدراء ✓
+
   🎙*⁞* م³ *⁞* ٱوٱمـر الخدمه ✓
+
   🎙*⁞* م⁴ *⁞* ٱوٱمـر الوضع والمسح ✓
+
   🎙*⁞* م⁵ *⁞* ٱوٱمـر ٱلمطـورين ✓
+
 ┛ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┗
 ]] 
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'md')
 end
-if is_leader(msg) and text:match("^تعيين امر سان1$") then
+if is_leader(msg) and text:match("^تعيين امر م1$") then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ ارسل لي الكليشه الان •" ,  1, "md")
 faederdx1:set(FAEDER..'bot:help01'..msg.sender_user_id_..'', 'msg')
 return false end
@@ -9758,7 +9869,7 @@ faederdx1:set(FAEDER..'bot:help1', text)
 faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
-if text:match("^سان1$") or  text:match("^سان١$") then
+if text:match("^م1$") or  text:match("^م١$") then
 local help = faederdx1:get(FAEDER..'bot:help1')
 local text =  [[
 👁‍🗨 ⁞ ٱوٱمـر ٱلحمـٱيۿ ✓
@@ -9793,7 +9904,7 @@ local text =  [[
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'md')
 end
-if is_leader(msg) and text:match("^تعيين امر سان3$") then
+if is_leader(msg) and text:match("^تعيين امر م2$") then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ ارسل لي الكليشه الان •" ,  1, "md")
 faederdx1:set(FAEDER..'bot:help21'..msg.sender_user_id_..'', 'msg')
 return false end
@@ -9806,17 +9917,18 @@ faederdx1:set(FAEDER..'bot:help2', text)
 faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
-if text:match("^سان3$") or text:match("^سان٢$") then
+if text:match("^م2$") or text:match("^م٢$") then
 local help = faederdx1:get(FAEDER..'bot:help2')
 local text =  [[
 ┓ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┏
  🏗*⁞* رفع بكل الصلاحيات
  🏗*⁞* الغاء خاصيه تغيير الاسم
  🏗*⁞* الغاء خاصيه التثبيت
- 🏗*⁞* رفع «» تنزيل ادمن بالقروب
+ 🏗*⁞* رفع «» تنزيل ادمن بالكروب
  🏗*⁞* رفع «» تنزيل ادمن {rep•id•us}
  🏗*⁞* رفع «» تنزيل مميز {rep•id•us}
 ┛ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┗
+
  🎖*⁞* ٱوٱمـر الحظر》تقييد》كتم》مسح  ✓
 ┓ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┏
  📛*⁞* طرد                     {rep•id•us}
@@ -9825,11 +9937,13 @@ local text =  [[
  📛*⁞* كتم  «» الغاء كتم   {rep•id•us}
  📛*⁞* تقييد«»الغاء التقييد{rep•id•us}
 ┛ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┗
+
  🎖*⁞* ٱوٱمـر اخرى  ✓
 ┓ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┏
  🗳*⁞* فحص • 
  🗳*⁞* اضف رد •
  🗳*⁞* مسح رد •
+
  🗳*⁞* تفعيل اللعبه •
  🗳*⁞* مسح الردود •
  🗳*⁞* جلب الترحيب •
@@ -9851,7 +9965,9 @@ local text =  [[
  🗳*⁞* اضافه + معرف العضو •
  🗳*⁞* اضف رسائل  + الايدي •
 ┛ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┗
+
 🎖*⁞* لاضهار القوائم ✓
+
 🗃*⁞* الدعم      «» قائمه المنع •
 🗃*⁞* الردود     «» المحظورين •
 🗃*⁞* المدراء    «» الاعدادات •
@@ -9860,13 +9976,16 @@ local text =  [[
 🗃*⁞* المطايه    «»   المميزين عام •
 🗃*⁞* المنشئين  «» المدراء العامين •
 🗃*⁞* الادمنيه العامين •
+
 ┓ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┏
+
 📚*⁞* ضع اللغه + العربيه «» الانكليزيه •
+
 ┛ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┗
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'md')
 end
-if is_leader(msg) and text:match("^تعيين امر سان3$") then
+if is_leader(msg) and text:match("^تعيين امر م3$") then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ ارسل لي الكليشه الان •" ,  1, "md")
 faederdx1:set(FAEDER..'bot:help31'..msg.sender_user_id_..'', 'msg')
 return false end
@@ -9879,7 +9998,7 @@ faederdx1:set(FAEDER..'bot:help3', text)
 faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
-if text:match("^سان3$") or text:match("^سان٣$") then
+if text:match("^م3$") or text:match("^م٣$") then
 local help = faederdx1:get(FAEDER..'bot:help3')
 local text =  [[
 🚦*⁞* اوامر الخدمه  ✓
@@ -9929,7 +10048,7 @@ local text =  [[
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'md')
 end
-if is_leader(msg) and text:match("^تعيين امر سان4$") then
+if is_leader(msg) and text:match("^تعيين امر م4$") then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ ارسل لي الكليشه الان •" ,  1, "md")
 faederdx1:set(FAEDER..'bot:help41'..msg.sender_user_id_..'', 'msg')
 return false end
@@ -9942,7 +10061,7 @@ faederdx1:set(FAEDER..'bot:help4', text)
 faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
-if text:match("^سان٤$") or text:match("^سان4$") then
+if text:match("^م٤$") or text:match("^م4$") then
 local help = faederdx1:get(FAEDER..'bot:help4')
 local text =  [[
 🎖*⁞* ٱوٱمـر لـوضع ✓
@@ -9972,7 +10091,7 @@ local text =  [[
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'md')
 end
-if is_leader(msg) and text:match("^تعيين امر سان5$") then
+if is_leader(msg) and text:match("^تعيين امر م5$") then
 faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ ارسل لي الكليشه الان •" ,  1, "md")
 faederdx1:set(FAEDER..'bot:help51'..msg.sender_user_id_..'', 'msg')
 return false end
@@ -9985,21 +10104,23 @@ faederdx1:set(FAEDER..'bot:help5', text)
 faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
-if text:match("^سان5$") or text:match("^سان٥$") then
+if text:match("^م٥$") or text:match("^م5$") then
 local help = faederdx1:get(FAEDER..'bot:help5')
 local text =  [[
 🚦*⁞* اوامر المطورين  ✓
 ┓ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┏
+
   📚*⁞* تفعيل •
   📚*⁞* تعطيل •
   📚*⁞* السيرفر •
   📚*⁞* غادر •
-  📚*⁞* القروبات •
+  📚*⁞* الكروبات •
   📚*⁞* المجموعات •
   ??*⁞* الاحصائيات •
   📚*⁞* تحديث •
   📚*⁞* تحديث السورس •
   📚*⁞* توجيه للكل  •
+
   💶*⁞* استعاده الاوامر •
   💶*⁞* تعيين الاوامر •
   💶*⁞* تعيين امر م1 •
@@ -10007,33 +10128,40 @@ local text =  [[
   💶*⁞* تعيين امر م3 •
   💶*⁞* تعيين امر م4 •
   💶*⁞* تعيين امر م5 •
+
   🚠*⁞* اضف رد للكل •
   🚠*⁞* مسح رد للكل •  
+
   🗳*⁞* حظر عام •
   🗳*⁞* الغاء العام •
   🗳*⁞* ضع دعم •
   🗳*⁞* حذف الدعم •
   🗳*⁞* جلب الملاحظه •
   🗳*⁞* تنظيف الرسائل •
-  🗳*⁞* تنظيف القروبات •
+  🗳*⁞* تنظيف الكروبات •
   🗳*⁞* جلب رد الخاص •
   🗳*⁞* حذف رد الخاص •
   🗳*⁞* ردود المطور •
   🗳*⁞* قائمه العام •
   🗳*⁞* قائمه المنع العام •
   🗳*⁞* مطورين الرتبه الثالثه •
-  🌿*⁞* تفعيل كل القروبات •
-  🌿*⁞* تعطيل كل القروبات •
+
+  🌿*⁞* تفعيل كل الكروبات •
+  🌿*⁞* تعطيل كل الكروبات •
+
   🗃*⁞* تفعيل البوت الخدمي •
   🗃*⁞* تعطيل البوت الخدمي •
+
   🗃*⁞* رفع «» تنزيل مدير •
   🗃*⁞* رفع «» تنزيل منشئ •
   🗃*⁞* رفع «» تنزيل مدير عام •
   🗃*⁞* رفع «» تنزيل ادمن عام •
   🗃*⁞* رفع «» تنزيل مميز عام •
   🗃*⁞* رفع «» تنزيل مطور رتبه ثالثه •
+
   🗃*⁞* رد الخاص تفعيل «» تعطيل •
   🗃*⁞* المغادره التلقائيه تفعيل «» تعطيل •
+
   🚠*⁞* قناة الاشتراك •
   🚠*⁞* تعيين «» تغيير قناة الاشتراك •
   🚠*⁞* تفعيل «» تعطيل الاشتراك الاجباري •
@@ -10047,7 +10175,8 @@ local text =  [[
   📱*⁞* مسح الادمنيه العامين •
   📱*⁞* مسح قائمه المنع العام •
   📱*⁞* مسح مطورين الرتبه الثالثه •
-  💷*⁞* كشف                    + ايدي القروب •
+
+  💷*⁞* كشف                    + ايدي الكروب •
   💷*⁞* اذاعه                    + المنشور •
   💷*⁞* فلتر عام               + الكلمه •
   💷*⁞* الغاء فلتر عام        + الكليشه •
@@ -10055,6 +10184,7 @@ local text =  [[
   💷*⁞* نشر بالخاص         + المنشور •
   💷*⁞* ضع رد الخاص      + الكليشه •
   💷*⁞* ضع كليشه المطور + الكليشه •
+
 ┛ـ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯ـ┗
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'md')
