@@ -7603,7 +7603,7 @@ faederdx(msg.chat_id_, msg.id_, 1, "🚦⁞ تم قفل🔐 المجموعة ل�
 end
 end
 if text:match("^فتح المجموعة  (%d+)$") then
-local unmutept = {string.match(text, "^فتح المجموعة  (%d+)$")}
+local unmutept[2] = {string.match(text, "^فتح المجموعة  (%d+)$")}
 faederdx1:del(FAEDER..'bot:unmuteall'..msg.chat_id_, num)
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, "🎖⁞ UnLock all has been enable for ")
