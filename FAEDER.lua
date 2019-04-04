@@ -1112,61 +1112,6 @@ end
 end
 getUser(msg.sender_user_id_, faeder)
 end
-
-local msg = data.message_
-text = msg.content_.text_
-if text then 
-function faeder(extra,result,success)
-if result.id_ then 
-local dx = faederdx1:get("faeder:Userr"..result.id_)
-if not result.username_ then 
-if dx then 
-faederdx(msg.chat_id_, msg.id_, 1,)
-faederdx1:del("faeder:Userr"..result.id_) 
-end
-end
-if result.username_ then 
-if dx and dx ~= result.username_ then 
-local faeder_text = {
-  
-}
-dxx = math.random(#faeder_text)
-faederdx(msg.chat_id_, msg.id_, 1, faeder_text[dxx], 1, 'html')
-end  
-faederdx1:set("faeder:Userr"..result.id_, result.username_) 
-end
-end
-end
-getUser(msg.sender_user_id_, faeder)
-end
-
-
-local msg = data.message_
-text = msg.content_.text_
-if text then 
-function dx(extra,result,success)
-if result.id_ then 
-local dx2 = faederdx1:get("dx:photo"..result.id_)
-if not result.profile_photo_ then 
-if dx2 then 
-faederdx(msg.chat_id_, msg.id_, 1,)
-faederdx1:del("dx:photo"..result.id_) 
-end
-end
-if result.profile_photo_ then 
-if dx2 and dx2 ~= result.profile_photo_.big_.persistent_id_ then 
-local dx_text = {
-  
-}
-dx3 = math.random(#dx_text)
-faederdx(msg.chat_id_, msg.id_, 1, dx_text[dx3], 1, 'html')
-end  
-faederdx1:set("dx:photo"..result.id_, result.profile_photo_.big_.persistent_id_) 
-end
-end
-end
-getUser(msg.sender_user_id_, dx)
-end
 local function openChat(chat_id,dl_cb)
 tdcli_function ({
 ID = "GetChat",
