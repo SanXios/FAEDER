@@ -1088,42 +1088,6 @@ function getUser(user_id, cb)
   user_id_ = user_id
     }, cb, nil)
   end
-local msg = data.message_
-text = msg.content_.text_
-if text then 
-function faeder(extra,result,success)
-if result.id_ then 
-local dx = faederdx1:get("faeder:name"..result.id_)
-if not result.first_name_ then 
-if dx then 
-faederdx1:del("faeder:name"..result.id_) 
-end
-end
-if result.first_name_ then 
-if dx and dx ~= result.first_name_ then 
-local faeder_text = {
-}
-dxx = math.random(#faeder_text)
-faederdx(msg.chat_id_, msg.id_, 1, faeder_text[dxx], 1, 'html')
-end  
-faederdx1:set("faeder:name"..result.id_, result.first_name_)  
-end
-end
-end
-getUser(msg.sender_user_id_, faeder)
-end
-local function openChat(chat_id,dl_cb)
-tdcli_function ({
-ID = "GetChat",
-chat_id_ = chat_id
-}, dl_cb, nil) 
-end
-function resolve_username(username,cb)
-tdcli_function ({
-ID = "SearchPublicChat",
-username_ = username
-}, cb, nil)
-end
 ----------------faeder
 ------------------
 function string:split(sep)
