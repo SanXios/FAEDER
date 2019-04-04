@@ -10416,7 +10416,3 @@ tdcli_function ({ID="GetChats", offset_order_="9223372036854775807", offset_chat
 end
 -----------------------------------------faeder------------------------------------------------------ 
 end
--- END VERSION FAEDER DX 
--- all the file by faeder dx @pro_c9 
--- join in chennel @faeder_ch 
--- join in chennel @team_faeder
