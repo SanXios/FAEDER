@@ -6077,8 +6077,8 @@ faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 resolve_username(ap[2],id_by_username)
 end
-if text:match("^ايدي @(.*)$") then
-local ap = {string.match(text, "^(ايدي) @(.*)$")}
+if text:match("^اايدي @(.*)$") then
+local ap = {string.match(text, "^(اايدي) @(.*)$")}
 function id_by_username(extra, result, success)
 if result.id_ then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -6329,7 +6329,7 @@ end
 if msg.reply_to_message_id_ ~= 0 then
 return ""
 else
-if (text:match("^ايدي$") or text:match("^[Ii]Dd$")) and faeder11(msg) then
+if (text:match("^اايدي$") or text:match("^[Ii]Dd$")) and faeder11(msg) then
 function faeder(extra,result,success)
 if result.username_ then username = '@'..result.username_ else username = ' لا يوجد 🎍 ' end
 local function getpro(extra, result, success) 
