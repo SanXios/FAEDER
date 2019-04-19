@@ -1113,7 +1113,7 @@ function faedr(msg,data)
 local msg = data.message_
 local text = msg.content_.text_
 local caption = msg.content_.caption_
-if text ==('مساند تفعيل') and not is_admin(msg.sender_user_id_, msg.chat_id_) and not faederdx1:get(FAEDER..'lock:bot:free'..bot_id) then
+if text ==('تفعيل') and not is_admin(msg.sender_user_id_, msg.chat_id_) and not faederdx1:get(FAEDER..'lock:bot:free'..bot_id) then
 function adding(extra,result,success)
 local function promote_admin(extra, result, success)
 local num = 0
@@ -9377,9 +9377,9 @@ faeder = '*🚏 ⁞ جلب الصوره الشخصيه معطل مسبقا ✅*'
 faederdx( msg.chat_id_, msg.id_, 1, faeder, 1, "md") 
 end
 end
-if text:match('^مساند تفعيل$') then
+if text:match('^تفعيل$') then
 function adding(extra,result,success)
-local txt = {string.match(text, "^(مساند تفعيل)$")}
+local txt = {string.match(text, "^(تفعيل)$")}
 local function promote_admin(extra, result, success)
 local admins = result.members_
 for i=0 , #admins do
