@@ -9435,8 +9435,8 @@ end
 getUser(msg.sender_user_id_,adding)
 end
 ------
-if text:match('^مساند تعطيل$') and is_admin(msg.sender_user_id_, msg.chat_id_) then
-local txt = {string.match(text, "^(مساند تعطيل)$")}
+if text:match('^تعطيل$') and is_admin(msg.sender_user_id_, msg.chat_id_) then
+local txt = {string.match(text, "^(تعطيل)$")}
 if not faederdx1:get(FAEDER.."bot:enable:"..msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🎖⁞ Group Actually Rem •', 1, 'md')
