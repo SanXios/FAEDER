@@ -5874,10 +5874,10 @@ end
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 end
-if text:match("^مطورين$") or text:match("^سان المطورين$") then
+if text:match("^سان المطورين$") or text:match("^سان المطورين$") then
 local hash =  'bot:admins:'
 local list = faederdx1:smembers(FAEDER..hash)
-text = "🚦⁞ مطورين 🔽 :\n\n"
+text = "🚦⁞ سان المطورين 🔽 :\n\n"
 for k, v in pairs(list) do
 if faederdx1:get(FAEDER.."SudoNumberGp" .. v) then
 gps = tonumber(faederdx1:get(FAEDER.."SudoNumberGp" .. v))
