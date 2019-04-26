@@ -3174,7 +3174,7 @@ elseif is_admin(result.id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 t = 'Dev 3'
 else
-t = 'مطور رتبه ثالثه'
+t = 'مطور'
 end
 elseif is_onall(result.id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -3216,7 +3216,7 @@ elseif is_donky(result.id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 t = 'Donky'
 else
-t = 'مطي واليكرم 😹💔'
+t = 'مزعج 😹💔'
 end
 elseif is_vipmem(result.id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -3303,7 +3303,7 @@ faeder1 = "مطور اساسي 🎖"
 elseif is_sudoid(result.sender_user_id_) then
 faeder1 = "مطور ثانوي"
 elseif is_admin(result.sender_user_id_, msg.chat_id_) then
-faeder1 = "مطور رتبه ثالثه 🏁"
+faeder1 = "مطور 🏁"
 elseif is_onall(result.sender_user_id_) then
 faeder1 = "مدير عام 🚩"
 elseif is_moall(result.sender_user_id_) then
@@ -5337,7 +5337,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *المدير* « ['..faeder_res.
 end end end end
 ----------------------------------------------faeder-------------------------------------------------
 if is_sudo(msg) and msg.reply_to_message_id_ ~= 0 then
-if text:match("^رفع مطور رتبه ثالثه$") then
+if text:match("^رفع مطور$") then
 function addadmin_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
@@ -5354,13 +5354,13 @@ faederdx1:sadd(FAEDER..hash, result.sender_user_id_)
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '*🎈|| The User ؛ '..result.sender_user_id_..' ، 🚷\n🎈|| has been Dev therd bot ✅ \nֆ • • • • • • • • • • • • • • • • ֆ*', 1, 'md')
 else
-faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ * تم رفعه « مطور رتبه ثالثه » *', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..result.sender_user_id_..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ * تم رفعه « مطور » *', 1, 'md')
 end end end end 
 getMessage(msg.chat_id_, msg.reply_to_message_id_,addadmin_by_reply)
 end
 -----------------------------------------------------------------------------------------------
-if text:match("^رفع مطور رتبه ثالثه @(.*)$") then
-local ap = {string.match(text, "^(رفع مطور رتبه ثالثه) @(.*)$")}
+if text:match("^رفع مطور @(.*)$") then
+local ap = {string.match(text, "^(رفع مطور) @(.*)$")}
 function addadmin_by_username(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.id_)
 local faeder_res = user_info_
@@ -5369,7 +5369,7 @@ if result.id_ then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 texts = '*🎈|| The User ؛ '..result.id_..' ، 🚷|| has been Dev therd bot ✅ \nֆ • • • • • • • • • • • • • • • • ֆ*'
 else
-texts = '👤╿❯ العضو « '..faeder_res..' »\n💯┊❯ ايديه « '..result.id_..' »\n📌┊❯ بواسطه « '..renk_faeder(msg)..' »\n☑️╽❯ تم رفعه « مطور رتبه ثالثه » '
+texts = '👤╿❯ العضو « '..faeder_res..' »\n💯┊❯ ايديه « '..result.id_..' »\n📌┊❯ بواسطه « '..renk_faeder(msg)..' »\n☑️╽❯ تم رفعه « مطور » '
 end
 faederdx1:sadd(FAEDER..'bot:admins:', result.id_)
 else
@@ -5385,22 +5385,22 @@ end
 resolve_username(ap[2],addadmin_by_username)
 end
 ----------------------------------------faeder-------------------------------------------------------
-if text:match("^رفع مطور رتبه ثالثه (%d+)$") then
-local ap = {string.match(text, "^(رفع مطور رتبه ثالثه) (%d+)$")}
+if text:match("^رفع مطور (%d+)$") then
+local ap = {string.match(text, "^(رفع مطور) (%d+)$")}
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. ap[2])
 local faeder_res = user_info_
 if user_info_ then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '*🎈|| The User ؛ '..ap[2]..' ، 🚷\n🎈|| has been Dev therd bot ✅ \nֆ • • • • • • • • • • • • • • • • ֆ*', 1, 'md')
 else
-faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..ap[2]..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ * تم رفعه « مطور رتبه ثالثه » *', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '👤╿❯ *العضو* « ['..faeder_res..'] »\n💯┊❯ *ايديه* « *'..ap[2]..'* »\n📌┊❯ *بواسطه « '..renk_faeder(msg)..' »*\n☑️╽❯ * تم رفعه « مطور » *', 1, 'md')
 end
 faederdx1:sadd(FAEDER..'bot:admins:', ap[2])
 end
 end
 ----------------------------------------faeder-------------------------------------------------------
 if msg.reply_to_message_id_ ~= 0 then
-if text:match("^تنزيل مطور رتبه ثالثه$") then
+if text:match("^تنزيل مطور$") then
 function deadmin_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
@@ -5426,7 +5426,7 @@ getMessage(msg.chat_id_, msg.reply_to_message_id_,deadmin_by_reply)
 end
 end
 -------------------------------------------faeder----------------------------------------------------
-if text:match("^تنزيل مطور رتبه ثالثه @(.*)$") then
+if text:match("^تنزيل مطور @(.*)$") then
 local hash = 'bot:admins:'
 local ap = {string.match(text, "^([Rr]emdev3) @(.*)$")}
 function remadmin_by_username(extra, result, success)
@@ -5453,7 +5453,7 @@ end
 resolve_username(ap[2],remadmin_by_username)
 end
 -------------------------------------faeder----------------------------------------------------------
-if text:match("^تنزيل مطور رتبه ثالثه (%d+)$") then
+if text:match("^تنزيل مطور (%d+)$") then
 local hash = 'bot:admins:'
 local ap = {string.match(text, "^([Rr]emdev3) (%d+)$")}
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. ap[2])
@@ -5874,10 +5874,10 @@ end
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 end
-if text:match("^مطورين الرتبه الثالثه$") or text:match("^سان المطورين$") then
+if text:match("^مطورين$") or text:match("^سان المطورين$") then
 local hash =  'bot:admins:'
 local list = faederdx1:smembers(FAEDER..hash)
-text = "🚦⁞ مطورين الرتبه الثالثه 🔽 :\n\n"
+text = "🚦⁞ مطورين 🔽 :\n\n"
 for k, v in pairs(list) do
 if faederdx1:get(FAEDER.."SudoNumberGp" .. v) then
 gps = tonumber(faederdx1:get(FAEDER.."SudoNumberGp" .. v))
@@ -6351,7 +6351,7 @@ elseif is_admin(msg.sender_user_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 t = 'Dev 3'
 else
-t = 'مطور رتبه ثالثه'
+t = 'مطور'
 end
 elseif is_onall(msg.sender_user_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -6393,7 +6393,7 @@ elseif is_donky(msg.sender_user_id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 t = 'Donky'
 else
-t = 'مطي واليكرم 😹💔'
+t = 'مزعج 😹💔'
 end
 elseif is_vipmem(msg.sender_user_id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -6436,7 +6436,7 @@ elseif is_admin(msg.sender_user_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 t = 'Dev 3'
 else
-t = 'مطور رتبه ثالثه'
+t = 'مطور'
 end
 elseif is_onall(msg.sender_user_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -6478,7 +6478,7 @@ elseif is_donky(msg.sender_user_id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 t = 'Donky'
 else
-t = 'مطي واليكرم 😹💔'
+t = 'مزعج 😹💔'
 end
 elseif is_vipmem(msg.sender_user_id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -6527,7 +6527,7 @@ elseif is_admin(msg.sender_user_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 t = 'Dev 3'
 else
-t = 'مطور رتبه ثالثه'
+t = 'مطور'
 end
 elseif is_onall(msg.sender_user_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -6569,7 +6569,7 @@ elseif is_donky(msg.sender_user_id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 t = 'Donky'
 else
-t = 'مطي واليكرم 😹💔'
+t = 'مزعج 😹💔'
 end
 elseif is_vipmem(msg.sender_user_id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -6602,7 +6602,7 @@ elseif is_admin(msg.sender_user_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 t = 'Dev 3'
 else
-t = 'مطور رتبه ثالثه'
+t = 'مطور'
 end
 elseif is_onall(msg.sender_user_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -6644,7 +6644,7 @@ elseif is_donky(msg.sender_user_id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 t = 'Donky'
 else
-t = 'مطي واليكرم 😹💔'
+t = 'مزعج 😹💔'
 end
 elseif is_vipmem(msg.sender_user_id_, msg.chat_id_) then
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
@@ -8737,12 +8737,12 @@ end
 end
 end
 if is_leader(msg) then 
-if txt[2] == 'dev3' or txts[2] == 'مطورين الرتبه الثالثه' then
+if txt[2] == 'dev3' or txts[2] == 'مطورين' then
 faederdx1:del(FAEDER..'bot:admins:')
 if faederdx1:get(FAEDER..'lang:gp:'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '🚦⁞ Banalllist has been cleared •', 1, 'md')
 else
-local faeder = '🚦⁞ تم مسح مطورين الرتبه الثالثه • \n🎗⁞ بواسطه «'..msg.sender_user_id_..'» •'
+local faeder = '🚦⁞ تم مسح مطورين • \n🎗⁞ بواسطه «'..msg.sender_user_id_..'» •'
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 48, string.len(msg.sender_user_id_))
 end
 end
@@ -10057,7 +10057,7 @@ local text =  [[
   🗳*⁞* ردود المطور •
   🗳*⁞* قائمه العام •
   🗳*⁞* قائمه المنع العام •
-  🗳*⁞* مطورين الرتبه الثالثه •
+  🗳*⁞* مطورين •
 
   🌿*⁞* تفعيل كل القروبات •
   🌿*⁞* تعطيل كل القروبات •
@@ -10070,7 +10070,7 @@ local text =  [[
   🗃*⁞* رفع «» تنزيل مدير عام •
   🗃*⁞* رفع «» تنزيل ادمن عام •
   🗃*⁞* رفع «» تنزيل مميز عام •
-  🗃*⁞* رفع «» تنزيل مطور رتبه ثالثه •
+  🗃*⁞* رفع «» تنزيل مطور •
 
   🗃*⁞* رد الخاص تفعيل «» تعطيل •
   🗃*⁞* المغادره التلقائيه تفعيل «» تعطيل •
@@ -10087,7 +10087,7 @@ local text =  [[
   📱*⁞* مسح المدراء العامين •
   📱*⁞* مسح الادمنيه العامين •
   📱*⁞* مسح قائمه المنع العام •
-  📱*⁞* مسح مطورين الرتبه الثالثه •
+  📱*⁞* مسح مطورين •
 
   💷*⁞* كشف                    + ايدي القروب •
   💷*⁞* اذاعه                    + المنشور •
